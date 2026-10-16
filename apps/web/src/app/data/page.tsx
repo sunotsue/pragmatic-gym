@@ -208,7 +208,7 @@ export default function DataLab() {
                     <Kv k="Base failures" v={r.base?.failures.join(", ") || "none"} />
                     <Kv k="Capability" v={meta?.capabilities[r.capability]?.label} />
                     {r.contrast_factor && <Kv k="Contrast" v={`one-factor counterfactual of cluster ${r.cluster}: ${r.contrast_factor}`} />}
-                    {r.source === "rollout" && <Kv k="Trajectory" v={<>behaviour move <span className="mono">{r.behaviour_action}</span> → <span className="mono">{r.behaviour_response}</span>; reward components {Object.entries(r.behaviour_reward_components ?? {}).filter(([, v]) => v).map(([k, v]) => `${k} ${v.toFixed(2)}`).join(", ") || "0"}</>} />}
+                    {r.source === "rollout" && <Kv k="Trajectory" v={<>behavior move <span className="mono">{r.behaviour_action}</span> → <span className="mono">{r.behaviour_response}</span>; reward components {Object.entries(r.behaviour_reward_components ?? {}).filter(([, v]) => v).map(([k, v]) => `${k} ${v.toFixed(2)}`).join(", ") || "0"}</>} />}
                     <Kv k="Provenance" v={<span className="mono">{r.id}</span>} />
                   </div>
                 </div>

@@ -16,7 +16,7 @@ distribution. This separates three things the project insists on keeping
 apart: inferring the likely intent, being calibrated about it, and choosing an
 action that is good *given* that uncertainty.
 
-These utilities are hypotheses about desirable behaviour, not measurements of
+These utilities are hypotheses about desirable behavior, not measurements of
 human preferences. They are versioned (DOMAIN_VERSION) and every downstream
 artifact records the version it was computed with.
 """

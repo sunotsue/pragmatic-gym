@@ -1,6 +1,6 @@
-# From prototype to research programme
+# From prototype to research program
 
-Pragmatic Gym is a first vertical slice. The programme it points to treats **training experiences as the object of study**: which experiences, structured how, produce which capabilities, and why. Below is how that could become a sequence of publishable work. It connects to work on human-like intelligence, machine psychology, pragmatic reasoning (e.g. the *On the Same Wavelength?* evaluation of pragmatic reasoning with RSA) and information-theoretic views of learning.
+Pragmatic Gym is a first vertical slice. The program it points to treats **training experiences as the object of study**: which experiences, structured how, produce which capabilities, and why. Below is how that could become a sequence of publishable work. It connects to work on human-like intelligence, machine psychology, pragmatic reasoning (e.g. the *On the Same Wavelength?* evaluation of pragmatic reasoning with RSA) and information-theoretic views of learning.
 
 ## 1. Measure the gap properly (months 0–2)
 
@@ -28,13 +28,13 @@ Pragmatic Gym is a first vertical slice. The programme it points to treats **tra
 - **Belief-state agents.** Agents that explicitly maintain and update a posterior over the other person's intent, trained with proper-scoring-rule rewards on their beliefs. This tests whether explicit belief tracking improves sample efficiency.
 - *Paper 3: "Reward functions for social interaction are hypotheses: an audit suite and calibrated simulators."*
 
-## 4. Generalisation and safety of the capability (months 6–12)
+## 4. Generalization and safety of the capability (months 6–12)
 
 - **Longitudinal common ground.** Multi-session relationships where history accumulates across episodes, a natural extension of the shared-history factor.
-- **Manipulation risk.** Better pragmatic inference also enables better persuasion. Measure boundary-respecting behaviour as capability grows, and treat it as a first-class outcome (the boundary-respect and coerced-yes outcomes are already tracked).
+- **Manipulation risk.** Better pragmatic inference also enables better persuasion. Measure boundary-respecting behavior as capability grows, and treat it as a first-class outcome (the boundary-respect and coerced-yes outcomes are already tracked).
 - **Regression and transfer.** Run a broader capability battery so pragmatic post-training doesn't trade off reasoning or honesty.
 
-## What this programme needs
+## What this program needs
 
 - A data-centric research lead who owns the loop: hypothesis, environment, experience design, training, measurement.
 - Modest compute: everything up to 8B fits on a small cluster.

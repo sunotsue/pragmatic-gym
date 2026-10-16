@@ -20,7 +20,7 @@ def test_latent_requires_researcher_token():
     assert c.get("/api/diagnosis").status_code == 403
 
 
-def test_fixture_inference_is_labelled():
+def test_fixture_inference_is_labeled():
     r = c.post("/api/infer", json={"scenario_id": "soft_no_birthday", "backend": "fixture"}, headers=R).json()
     p = r["output"]["provenance"]
     assert p["is_real_inference"] is False and "FIXTURE" in p["label"]

@@ -2,7 +2,7 @@
 
 Each factor is an *observable* situational variable. Levels are rendered into
 explicit context sentences (with several paraphrases each, so wording can be
-varied independently of content). Cultural context is operationalised as an
+varied independently of content). Cultural context is operationalized as an
 explicitly stated communication norm, never inferred from nationality,
 ethnicity or any identity attribute.
 
@@ -220,7 +220,7 @@ FACTORS: tuple[Factor, ...] = (
     ),
     Factor(
         "placebo", "Placebo detail (control)",
-        "Adds an irrelevant detail of similar length. Hypothesised effect: zero. Separates 'more text' from informative context.",
+        "Adds an irrelevant detail of similar length. Hypothesized effect: zero. Separates 'more text' from informative context.",
         (
             L("none", "None"),
             L("neutral", "Irrelevant detail", {"*": ["{S} recently started learning to play the guitar.", "{S} just got back from visiting a cousin in another city."],

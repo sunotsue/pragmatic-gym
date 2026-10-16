@@ -154,7 +154,7 @@ def playground():
                         "usage": {}}
                 recorded.put("interpret", obs, {"output": {
                     "interpretation_probs": r["probs"], "most_likely": max(r["probs"], key=r["probs"].get),
-                    "rationale": "Distribution read from the model's next-token probabilities over option letters (no verbalised reasoning).",
+                    "rationale": "Distribution read from the model's next-token probabilities over option letters (no verbalized reasoning).",
                     "action": r["action"], "reply": action.example, "provenance": prov, "raw": ""}})
         recorded.save()
         for e in active:

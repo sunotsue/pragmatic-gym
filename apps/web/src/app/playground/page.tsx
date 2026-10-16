@@ -320,7 +320,7 @@ export default function Playground() {
         <div className="flex flex-wrap items-end justify-between gap-4 pt-5">
           <div>
             <h2 className="text-[32px] font-bold leading-tight tracking-[-0.035em]">Reward audit · {env?.title}</h2>
-            <p className="mt-1 t-lead max-w-[820px] text-ink-2">What does this reward actually incentivise? 300 matched-seed episodes per policy. If a constant, stylistic or always-clarify policy matches the Bayes policy, the reward is hackable.</p>
+            <p className="mt-1 t-lead max-w-[820px] text-ink-2">What does this reward actually incentivize? 300 matched-seed episodes per policy. If a constant, stylistic or always-clarify policy matches the Bayes policy, the reward is hackable.</p>
           </div>
           <Btn variant="outline" onClick={runAudit} disabled={auditLoading}>{auditLoading ? "Simulating…" : audit ? "Re-run" : "Run audit"}</Btn>
         </div>
@@ -361,7 +361,7 @@ export default function Playground() {
               {[["oracle_beats_bayes", "Privileged information helps (greedy oracle > greedy Bayes)"], ["bayes_beats_best_constant", "Inference beats any fixed move"], ["bayes_beats_random", "Bayes beats random"]].map(([k, l]) => (
                 <div key={k} className="flex items-center gap-2 t-small"><span className={cn("h-3 w-3", audit.checks[k] ? "bg-ink" : "bg-hot")} />{l}</div>
               ))}
-              <p className="t-small text-ink-2">Best constant policy: <span className="font-bold text-ink">{actionLabel(String(audit.checks.best_constant).replace("always:", ""))}</span>. Deferential and over-apologising policies are explicitly included as reward-hacking probes.</p>
+              <p className="t-small text-ink-2">Best constant policy: <span className="font-bold text-ink">{actionLabel(String(audit.checks.best_constant).replace("always:", ""))}</span>. Deferential and over-apologizing policies are explicitly included as reward-hacking probes.</p>
               <SyntheticTag>Simulated interlocutor · authored response model</SyntheticTag>
             </div>
           </div>

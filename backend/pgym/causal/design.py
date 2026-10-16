@@ -8,7 +8,7 @@ the same variant id renders the *same* names and wording choices across
 cells, so cell contrasts within a variant are paired comparisons.
 
 What these experiments estimate: the causal effect of a prompt-level
-intervention on *model behaviour*. They say nothing about how real people
+intervention on *model behavior*. They say nothing about how real people
 would interpret the same messages — that requires human data, which the
 analysis reports separately when available.
 """

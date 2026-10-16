@@ -107,7 +107,7 @@ export function SensitivityScatter({ points, slope, intercept }: { points: { x: 
       <ResponsiveContainer>
         <ScatterChart margin={{ top: 8, right: 12, bottom: 18, left: -12 }}>
           <CartesianGrid stroke="var(--pg-line)" />
-          <XAxis type="number" dataKey="x" domain={[0, 1]} tickFormatter={(v) => `${Math.round(v * 100)}`} tickLine={false} label={{ value: "hypothesised P", position: "insideBottom", offset: -8, fontSize: 11 }} />
+          <XAxis type="number" dataKey="x" domain={[0, 1]} tickFormatter={(v) => `${Math.round(v * 100)}`} tickLine={false} label={{ value: "hypothesized P", position: "insideBottom", offset: -8, fontSize: 11 }} />
           <YAxis type="number" dataKey="y" domain={[0, 1]} tickFormatter={(v) => `${Math.round(v * 100)}`} tickLine={false} width={44} />
           <ZAxis range={[60, 60]} />
           <ReferenceLine segment={[{ x: 0, y: 0 }, { x: 1, y: 1 }]} stroke="var(--pg-ink-3)" strokeDasharray="3 3" />

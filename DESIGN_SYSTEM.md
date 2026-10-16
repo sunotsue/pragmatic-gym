@@ -41,14 +41,14 @@ Defined in `apps/web/src/app/globals.css` (Tailwind v4 `@theme` + shadcn CSS var
    - This is the only place the accent is used heavily, keeping a "one hot accent" discipline.
    - The landing figure is a dot drawing of two speech bubbles.
 3. **The heavy rule.** A 3px ink rule sits under the header and above each page title. Hairlines (`--pg-line`) separate everything else.
-4. **No cards, no radius, no shadows.** shadcn defaults (rounded, shadowed, grey borders) are overridden globally: `--radius: 0`, and inputs and buttons get 1.5px ink borders. Primary buttons are solid ink with white text. The accent is reserved for live and model state, never for decoration.
+4. **No cards, no radius, no shadows.** shadcn defaults (rounded, shadowed, gray borders) are overridden globally: `--radius: 0`, and inputs and buttons get 1.5px ink borders. Primary buttons are solid ink with white text. The accent is reserved for live and model state, never for decoration.
 5. **Conversation first.** Messages are square-cornered blocks. Incoming messages sit on `--pg-wash`; "You" messages are ink with white text. The research panel is a separate column with smaller, denser type, so the dialogue stays the most legible thing on screen.
-6. **Charts (Recharts).** Ink axes without gridlines, or hairline gridlines at most. Series are ink for the reference or hypothesis and accent for the model. Uncertainty is shown as thin whiskers. There are no gradients, fills or legend boxes, and every value is labelled with tabular figures.
+6. **Charts (Recharts).** Ink axes without gridlines, or hairline gridlines at most. Series are ink for the reference or hypothesis and accent for the model. Uncertainty is shown as thin whiskers. There are no gradients, fills or legend boxes, and every value is labeled with tabular figures.
 7. **Provenance badges** sit next to every model number:
    - a filled accent dot for real inference;
    - a hollow ring for a replay of a recorded inference;
-   - a striped grey square for a fixture or heuristic, with the word "FIXTURE".
-8. **Motion.** Motion is minimal: 150ms opacity and colour transitions, and dot fills that animate to new values when results arrive.
+   - a striped gray square for a fixture or heuristic, with the word "FIXTURE".
+8. **Motion.** Motion is minimal: 150ms opacity and color transitions, and dot fills that animate to new values when results arrive.
 
 ## 3. Screenshots
 

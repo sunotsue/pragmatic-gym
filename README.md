@@ -5,7 +5,7 @@
 > *“That sounds fun. I'll let you know!”* might be genuine enthusiasm, a polite no, a way of keeping options open, or truly undecided. People resolve this from relationship, shared history, audience and stakes. Pragmatic Gym asks three questions:
 > - Can models learn to make the same inference?
 > - Which training experiences teach it?
-> - Does the improvement generalise?
+> - Does the improvement generalize?
 
 Pragmatic Gym is one working vertical slice of a data-centric research loop:
 
@@ -34,19 +34,19 @@ Every model number on screen carries a **provenance badge**:
 |---|---|
 | ● accent dot | Live inference |
 | ○ ring | Replay of a recorded inference |
-| ▨ hatched square, labelled **FIXTURE** | Deterministic heuristic, not a model |
+| ▨ hatched square, labeled **FIXTURE** | Deterministic heuristic, not a model |
 
-Every reference distribution is labelled **synthetic / authored hypothesis**. No number is fabricated, and training results appear only once a real run has finished.
+Every reference distribution is labeled **synthetic / authored hypothesis**. No number is fabricated, and training results appear only once a real run has finished.
 
 ## Quick start
 
 ```bash
 make install     # Python 3.11 venv via uv (+ torch/transformers/peft/trl) and npm deps
 make dev         # API on :8000, web on :3000  →  http://localhost:3000
-make test        # 84 tests, ~30 s, CPU only
+make test        # 87 tests, ~20 s, CPU only
 ```
 
-**Recorded mode (default).** The app serves saved outputs of the local model from `data/recorded/local_qwen.json` and never runs a model, so it starts instantly and can't stall mid-demo. Results are labelled *Recorded local inference* with their recording date. `scripts/record_demo.py` regenerates the recordings. It covers every Explorer scenario, the corpus diagnosis, every Counterfactual Lab preset, any single variable compared on its own (up to 6 surface variants), every reward audit, and every Data Lab selection, comparison and export. Anything outside that shows a "not recorded" message.
+**Recorded mode (default).** The app serves saved outputs of the local model from `data/recorded/local_qwen.json` and never runs a model, so it starts instantly and can't stall mid-demo. Results are labeled *Recorded local inference* with their recording date. `scripts/record_demo.py` regenerates the recordings. It covers every Explorer scenario, the corpus diagnosis, every Counterfactual Lab preset, any single variable compared on its own (up to 6 surface variants), every reward audit, and every Data Lab selection, comparison and export. Anything outside that shows a "not recorded" message.
 
 **Live mode.** Set `PGYM_LIVE=1` to run models live. Real inference works offline with a local open-weight model. The first run downloads `Qwen/Qwen2.5-0.5B-Instruct` (≈1 GB) from Hugging Face. Other backends (selected in the header):
 
@@ -55,7 +55,7 @@ make test        # 84 tests, ~30 s, CPU only
 | `local_hf` (default) | nothing | Next-token letter distribution, averaged over all cyclic option orders. Apple MPS / CUDA / CPU. |
 | `anthropic` | `ANTHROPIC_API_KEY` (+ `ANTHROPIC_WORKSPACE_ID` if the key isn't scoped to a workspace) | `claude-opus-5-5` by default (`PGYM_ANTHROPIC_MODEL`, `PGYM_ANTHROPIC_EFFORT`). Structured JSON output; results are recorded for replay. |
 | `openai_compat` | `PGYM_OPENAI_BASE_URL`, `PGYM_OPENAI_MODEL` | Any vLLM / llama.cpp / LM Studio server. |
-| `replay` | recorded runs in `data/fixtures/recorded_inference.jsonl` | Labelled with the original model and timestamp. |
+| `replay` | recorded runs in `data/fixtures/recorded_inference.jsonl` | Labeled with the original model and timestamp. |
 | `fixture` | always | Keyword heuristic for offline UI demos. Never presented as inference. |
 
 On the machine used to build this, the provided `ANTHROPIC_API_KEY` returned *"This API key is not scoped to a workspace … include the anthropic-workspace-id header"*. The API shows that reason verbatim in `/api/status` and falls back to `local_hf`. Set `ANTHROPIC_WORKSPACE_ID` to enable Claude.
@@ -138,8 +138,8 @@ tests/                    environment, leakage, rewards (incl. hacking probes), 
 - **No forced single ground truth.** Ambiguous messages carry reference distributions, and top-1 accuracy is scored only on decisive items.
 - **Four capabilities scored separately:** inference, calibration, action under uncertainty, and interaction outcome.
 - **References and rewards are hypotheses.** The LSSM and utility tables are authored, versioned and auditable, and are designed to be replaced by human distributions (`data/eval/human_annotations.schema.json`).
-- **Prompt interventions estimate effects on model behaviour,** not on human interpretation.
-- **Culture is an explicitly stated norm,** never inferred from identity. Names are randomised as part of each surface variant.
+- **Prompt interventions estimate effects on model behavior,** not on human interpretation.
+- **Culture is an explicitly stated norm,** never inferred from identity. Names are randomized as part of each surface variant.
 - **Style can't score.** Evaluation reads next-token option probabilities, and reward never reads message text. Deference bait and paraphrase stability are measured explicitly.
 
 ## Design
@@ -154,6 +154,6 @@ Tokens and decisions are in [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). App screenshot
 ## Docs
 
 - [RESEARCH.md](RESEARCH.md): hypotheses, methodology, controls, metrics, results, limitations and the reviewer pass
-- [DEMO.md](DEMO.md): 6-minute live walkthrough
-- [FUTURE_RESEARCH.md](FUTURE_RESEARCH.md): how this becomes a research programme
+- [DEMO.md](DEMO.md): 7-minute live walkthrough
+- [FUTURE_RESEARCH.md](FUTURE_RESEARCH.md): how this becomes a research program
 - [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md)

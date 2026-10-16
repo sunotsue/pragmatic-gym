@@ -10,13 +10,13 @@ distribution over a speaker's intent:
 
 Uses of the LSSM inside Pragmatic Gym:
 
-1. Counterfactual Lab: the *hypothesised* reference distribution for each
-   cell, against which model behaviour is compared ("does the model move in
+1. Counterfactual Lab: the *hypothesized* reference distribution for each
+   cell, against which model behavior is compared ("does the model move in
    the direction the hypothesis predicts, and by how much?").
 2. Social RL environments: the prior from which the hidden intent is sampled.
 3. Training targets: the posterior given *observable* context — never the
    sampled hidden intent — so SFT targets teach calibrated inference rather
-   than overconfident guessing of a realised latent.
+   than overconfident guessing of a realized latent.
 
 The numbers are authored by the researcher (version-pinned below). They are
 not estimates from human data. The project's methodology is explicitly
@@ -170,7 +170,7 @@ def posterior(domain: str, base: dict[str, float], levels: dict[str, str]) -> di
 
 
 def explain(domain: str, base: dict[str, float], levels: dict[str, str]) -> list[dict]:
-    """Audit trail: every term that contributed to the hypothesised logits."""
+    """Audit trail: every term that contributed to the hypothesized logits."""
     terms = [{"term": "base", "delta": dict(base)}]
     eff = EFFECTS.get(domain, {})
     for f, lv in levels.items():

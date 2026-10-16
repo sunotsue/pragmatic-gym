@@ -27,7 +27,7 @@ def main():
     S, arms, splits = r["summary"], list(r["summary"]), list(next(iter(r["summary"].values()))["splits"])
     out = [f"**Experiment `{r['experiment_id']}`** — {r['label']}. Seeds completed: {', '.join(map(str, r['meta']['seeds_completed']))}. "
            f"Budget {r['meta']['budget'] // 1000}k tokens per arm. Eval items: " + ", ".join(f"{SPLIT[k]} {v}" for k, v in r["meta"]["eval_sizes"].items()) + ".", ""]
-    out += ["**Pre-registered tests** (Δ cross-entropy, treatment − control, pooled generalisation sets; negative = treatment better):", "",
+    out += ["**Pre-registered tests** (Δ cross-entropy, treatment − control, pooled generalization sets; negative = treatment better):", "",
             "| Hypothesis | Δ (nats) | 95% CI | p | p (Holm) |", "|---|---|---|---|---|"]
     for k in ("H1_contrast_vs_random", "H2_context_vs_isolated", "H3_failure_vs_random"):
         t = r["tests"].get(k)

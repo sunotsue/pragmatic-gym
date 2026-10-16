@@ -7,7 +7,7 @@
  "target_failure": null,
  "include_context": true,
  "n": 114,
- "info": "Greedy farthest-point (k-center) selection over TF-IDF vectors of the observable conversation: maximises coverage of surface variety.",
+ "info": "Greedy farthest-point (k-center) selection over TF-IDF vectors of the observable conversation: maximizes coverage of surface variety.",
  "items": [
   {
    "id": "rel_like_what_we_have::dbabe9fb::v4",

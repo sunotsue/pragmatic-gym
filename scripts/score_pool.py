@@ -2,7 +2,7 @@
 
 These per-item diagnostics (cross-entropy vs reference, failure flags, chosen
 action) are what failure-targeted selection uses. Only the base model's
-observable-input behaviour is used — no hidden state.
+observable-input behavior is used — no hidden state.
 
     backend/.venv/bin/python scripts/score_pool.py [--model Qwen/Qwen2.5-0.5B-Instruct]
 """

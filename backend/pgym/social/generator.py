@@ -5,8 +5,8 @@ renderer takes a family, a full assignment of factor levels and a `variant`
 seed, and produces a `Scenario` whose observable text is built only from the
 factor-level sentences. The `variant` controls surface variation only —
 which paraphrase of each sentence is used, sentence order, names and the
-surface form of the utterance (punctuation, emoji, capitalisation) — so the
-hypothesised reference distribution is invariant to it by construction. That
+surface form of the utterance (punctuation, emoji, capitalization) — so the
+hypothesized reference distribution is invariant to it by construction. That
 is what lets us separate context sensitivity from wording sensitivity.
 """
 from __future__ import annotations
@@ -244,7 +244,7 @@ def render(family_id: str, levels: dict[str, str] | None = None, variant: int = 
         actions=[ActionOption(**{**a.__dict__, "style": list(a.style)}) for a in dom.actions],
         reference=Reference(
             distribution=ref, source="lssm", version=lssm.LSSM_VERSION,
-            rationale="Hypothesised distribution from the authored LSSM given the rendered context. Not human data.",
+            rationale="Hypothesized distribution from the authored LSSM given the rendered context. Not human data.",
         ),
         hidden={"lssm_terms": lssm.explain(fam.domain, fam.base, lv)},
         factors=lv,

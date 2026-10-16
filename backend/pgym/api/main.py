@@ -42,7 +42,7 @@ from pgym.storage import db
 app = FastAPI(title="Pragmatic Gym", version="0.3.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-_lock = threading.Lock()  # serialises local-model inference (one MPS model at a time)
+_lock = threading.Lock()  # serializes local-model inference (one MPS model at a time)
 
 
 def is_researcher(token: str | None) -> bool:

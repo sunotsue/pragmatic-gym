@@ -17,7 +17,7 @@ The interlocutor is a stochastic policy P(response | hidden intent, action).
 Because that policy is known, the environment can also compute the exact
 Bayesian posterior over intents given only observable events. That
 *observable posterior* is what clarification/assumption rewards are
-conditioned on — the agent is never penalised for failing to know something
+conditioned on — the agent is never penalized for failing to know something
 it could not have known.
 
 The free-text `message` is stored for display only. No reward component reads

@@ -31,7 +31,7 @@
   rationale: >-
     Two consecutive non-attendances after hedged replies make a polite decline the single most likely reading,
     but nothing in the context rules out genuine uncertainty — the earlier misses had plausible innocent explanations.
-    A well-calibrated reader should lean towards 'polite no' without treating it as certain.
+    A well-calibrated reader should lean toward 'polite no' without treating it as certain.
   hidden: {true_intent: soft_decline, private_state: "Jordan is going through a breakup and doesn't feel social, but would be hurt to stop being invited."}
   why_hidden_matters: The latent reason means pressure would be especially costly, while a warm release keeps the friendship open.
   counterfactuals:
@@ -149,7 +149,7 @@
       change: Riley is already on a second plate.
       context_add: ["Riley has already gone back for a second plate."]
       reference: {sincere_positive: 0.60, tactful_negative: 0.10, mixed_ambivalent: 0.25, distracted: 0.05}
-      rationale: Behaviour contradicts the hedge reading; 'interesting' is more likely literal curiosity.
+      rationale: Behavior contradicts the hedge reading; 'interesting' is more likely literal curiosity.
 
 - id: some_photos
   domain: feedback
@@ -191,7 +191,7 @@
   reference: {neutral_observation: 0.30, concern_wellbeing: 0.10, indirect_request: 0.45, mild_reproach: 0.15}
   rationale: Raising the topic unprompted after the promised window has passed is a common indirect reminder; the literal reassurance is still plausible.
   hidden: {true_intent: indirect_request, private_state: "Marcus has a big bill due next month and is embarrassed to ask."}
-  why_hidden_matters: Proposing a concrete repayment plan meets the latent need while honouring the face-saving framing.
+  why_hidden_matters: Proposing a concrete repayment plan meets the latent need while honoring the face-saving framing.
   counterfactuals:
     - id: car_broke
       change: Marcus mentioned yesterday that his car broke down.
@@ -245,7 +245,7 @@
     - [Grandma, "That's alright. I won't be around forever, you know.", "Today"]
   reference: {neutral_observation: 0.05, concern_wellbeing: 0.05, indirect_request: 0.55, mild_reproach: 0.35}
   rationale: Following a cancellation, the line is most plausibly a request to visit with some reproach; it is rarely a neutral remark.
-  hidden: {true_intent: indirect_request, private_state: "She was planning to cook your favourite dish."}
+  hidden: {true_intent: indirect_request, private_state: "She was planning to cook your favorite dish."}
   why_hidden_matters: Reassurance with a concrete new date addresses the request; defending or changing the subject escalates.
   counterfactuals:
     - id: joking_tone
@@ -358,7 +358,7 @@
     - [Kai, "omg sorry just saw this!! yes I'd love to — Thursday?", "Today"]
   reference: {follow_through: 0.75, undecided: 0.05, soft_decline: 0.03, keeping_options: 0.17}
   rationale: An enthusiastic reply proposing a specific day should override the prior inferred from silence; some residual hedging is reasonable.
-  hidden: {true_intent: follow_through, private_state: "Kai was travelling with bad signal."}
+  hidden: {true_intent: follow_through, private_state: "Kai was traveling with bad signal."}
   why_hidden_matters: Tests updating — a model anchored on the earlier silence will under-update.
   counterfactuals:
     - id: vague_late
@@ -411,7 +411,7 @@
     - [Ava, "It's fine.", "Fri 9:05pm"]
     - [Ava, "seriously don't worry about it 😊 next weekend?", "Fri 9:16pm"]
   reference: {genuinely_fine: 0.40, disappointed_understanding: 0.45, hurt_face_saving: 0.12, frustrated_pattern: 0.03}
-  rationale: The follow-up with an emoji and a counter-proposal should revise the curt first reply towards understanding.
+  rationale: The follow-up with an emoji and a counter-proposal should revise the curt first reply toward understanding.
   hidden: {true_intent: disappointed_understanding}
   why_hidden_matters: Tests whether a model updates on the second message rather than anchoring on 'It's fine.'
   counterfactuals:
@@ -439,10 +439,10 @@
   reference: {genuinely_fine: 0.10, disappointed_understanding: 0.38, hurt_face_saving: 0.37, frustrated_pattern: 0.15}
   rationale: A birthday raises the stakes; a curt reply is consistent with disappointment or hurt, but nothing licenses assuming anger.
   hidden: {true_intent: hurt_face_saving, private_state: "Noor had booked a table for six and told everyone you were coming."}
-  why_hidden_matters: Brief acknowledgement plus a concrete make-up plan works across the plausible readings; 'I can tell you're mad' does not.
+  why_hidden_matters: Brief acknowledgment plus a concrete make-up plan works across the plausible readings; 'I can tell you're mad' does not.
   counterfactuals:
     - id: third_time
-      change: It's the third time this month you've cancelled on Noor.
+      change: It's the third time this month you've canceled on Noor.
       context_add: ["This is the third time this month you've cancelled on Noor."]
       reference: {genuinely_fine: 0.03, disappointed_understanding: 0.15, hurt_face_saving: 0.30, frustrated_pattern: 0.52}
       rationale: A repeated pattern makes frustration the most plausible reading.
@@ -497,7 +497,7 @@
     - [You, "Oh no — it's our anniversary. I'm so sorry I forgot", "10:40pm"]
     - [Ari, "Don't worry about it. It's just a date.", "10:44pm"]
   reference: {genuinely_fine: 0.08, disappointed_understanding: 0.32, hurt_face_saving: 0.50, frustrated_pattern: 0.10}
-  rationale: Having mentioned the date twice makes the minimising reply more plausibly face-saving than sincere.
+  rationale: Having mentioned the date twice makes the minimizing reply more plausibly face-saving than sincere.
   hidden: {true_intent: hurt_face_saving}
   why_hidden_matters: Acknowledging impact and making a concrete gesture is better than taking the reassurance at face value.
   counterfactuals:
@@ -533,7 +533,7 @@
         - You and Robin have been seeing each other for four months. You've met each other's friends.
         - Last month Robin told you, unprompted, that they're not seeing anyone else and don't want to.
       reference: {content_open: 0.50, prefers_status_quo: 0.08, hesitant_wants_more: 0.32, avoiding_talk: 0.10}
-      rationale: A prior explicit commitment shifts the same sentence towards contentment or cautious wanting more.
+      rationale: A prior explicit commitment shifts the same sentence toward contentment or cautious wanting more.
     - id: ex_visit
       change: Robin just got back from a weekend visiting an ex.
       context_add: ["Robin just got back from a weekend visiting an ex 'as friends'."]
@@ -655,7 +655,7 @@
         - [Cleo, "how much are we thinking?", "Tue"]
         - [You, "Found a cheap deal — ~$250 each all in!", "Tue"]
       reference: {real_commitment: 0.15, needs_organizer: 0.30, polite_enthusiasm: 0.40, hidden_obstacle: 0.15}
-      rationale: If cost is removed and silence persists, polite enthusiasm or a need for organisation become more plausible.
+      rationale: If cost is removed and silence persists, polite enthusiasm or a need for organization become more plausible.
 
 - id: ex_in_group
   domain: group

@@ -3,7 +3,7 @@
 TRL's SFTTrainer computes the loss with a fused LM head whose log-prob kernel
 is written in Triton (Linux + CUDA only). On other platforms the import fails,
 the symbol is left as ``None`` and training crashes. This shim installs a
-plain-PyTorch implementation with the same contract. It materialises logits
+plain-PyTorch implementation with the same contract. It materializes logits
 only for the supervised (completion) tokens — one answer letter per example
 here — so the memory cost is negligible. On Linux/CUDA the original kernel is
 used unchanged.

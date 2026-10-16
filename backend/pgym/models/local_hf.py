@@ -121,7 +121,7 @@ class LocalHFAdapter(Adapter):
                           settings={"model_id": self.model_id, "adapter": self.adapter_path, "scoring": "next-token letter distribution, averaged over cyclic option orders",
                                     "action_probs": {a.id: p for a, p in zip(obs.actions, ap)}, "reply_source": reply_source})
         return InterpretationOutput(interpretation_probs=probs, most_likely=top,
-                                    rationale="Distribution read from the model's next-token probabilities over option letters (no verbalised reasoning).",
+                                    rationale="Distribution read from the model's next-token probabilities over option letters (no verbalized reasoning).",
                                     action=action.id, reply=reply, provenance=prov)
 
     def describe(self) -> dict:

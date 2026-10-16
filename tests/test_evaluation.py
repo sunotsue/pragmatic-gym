@@ -129,6 +129,6 @@ def test_rollout_targets_are_observable_posteriors():
     rows = [r for r in read_jsonl(POOL_DIR / "train_pool.jsonl") if r["source"] == "rollout"][:30]
     assert rows
     for r in rows:
-        # not one-hot: never trained on the realised hidden intent
+        # not one-hot: never trained on the realized hidden intent
         assert max(r["reference"].values()) < 0.999 or r["turn"] >= 1
         assert abs(sum(r["reference"].values()) - 1) < 1e-6

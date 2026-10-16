@@ -7,7 +7,7 @@ contain. Every selected example carries a human-readable `reason`.
 random                 uniform sample                                  (control)
 diversity              k-center greedy over TF-IDF of the observable text
 failure_targeted       highest base-model loss, optionally focused on one failure mode
-counterfactual_contrast whole contrast clusters (anchor + one-factor neighbours), ranked by
+counterfactual_contrast whole contrast clusters (anchor + one-factor neighbors), ranked by
                        how much the single changed factor moves the reference
 isolated               the random arm's items with relationship/history stripped (ablation:
                        "isolated refusal examples" vs context-rich ones)
@@ -30,7 +30,7 @@ from pgym.training.formats import mc_user_prompt
 STRATEGIES = ["random", "diversity", "failure_targeted", "counterfactual_contrast", "isolated"]
 STRATEGY_INFO = {
     "random": "Uniform sample from the candidate pool. The control arm.",
-    "diversity": "Greedy farthest-point (k-center) selection over TF-IDF vectors of the observable conversation: maximises coverage of surface variety.",
+    "diversity": "Greedy farthest-point (k-center) selection over TF-IDF vectors of the observable conversation: maximizes coverage of surface variety.",
     "failure_targeted": "Highest base-model loss against the reference (cross-entropy + action regret), optionally focused on one diagnosed failure mode, at most two per contrast cluster.",
     "counterfactual_contrast": "Selects whole contrast clusters — the same conversation with one social factor changed — ranked by how far that single change moves the reference interpretation.",
     "isolated": "Ablation: the random arm's experiences with relationship context and history removed (utterance only). Tests whether context-rich examples teach more than isolated ones at the same token budget.",

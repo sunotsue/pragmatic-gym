@@ -23,7 +23,7 @@ def test_message_text_does_not_affect_reward():
 
 
 def test_belief_score_is_proper():
-    """Expected log score is maximised by reporting the true distribution (not by over/under-confidence)."""
+    """Expected log score is maximized by reporting the true distribution (not by over/under-confidence)."""
     env = make("soft_no")
     env.reset(seed=0)
     prior = dict(env.prior)

@@ -6,14 +6,14 @@
 
 1. **Capability gap.** Which social-pragmatic capabilities do current LMs lack? Is the failure in *inference* (what is meant), *calibration* (how sure to be), or *action* (what to do next)?
 2. **Experience selection.** Which training experiences are causally useful for teaching these capabilities, at a fixed token budget?
-3. **Generalisation.** Do improvements transfer to unseen relationships, unseen phrasings and an unseen social domain, and do they come without regressions or mere stylistic imitation?
+3. **Generalization.** Do improvements transfer to unseen relationships, unseen phrasings and an unseen social domain, and do they come without regressions or mere stylistic imitation?
 
 ## 2. Constructs, and why they're scored separately
 
-| Construct | Operationalisation | Why it's separate |
+| Construct | Operationalization | Why it's separate |
 |---|---|---|
 | Inference | Distribution over a discrete set of readings (e.g. *interested · undecided · polite no · keeping options open*). Cross-entropy / KL to the reference, and top-1 agreement **only on decisive items** (reference top ≥ .45 with a ≥ .10 margin). | A model can read the situation correctly and still act badly, and vice versa. |
-| Calibration | Confidence gap (model confidence − reference mass on its top choice); entropy gap; overconfidence rate on *genuinely ambiguous* items (normalised reference entropy ≥ .80 and model top > .70). | Ambiguous messages shouldn't be forced into one interpretation. |
+| Calibration | Confidence gap (model confidence − reference mass on its top choice); entropy gap; overconfidence rate on *genuinely ambiguous* items (normalized reference entropy ≥ .80 and model top > .70). | Ambiguous messages shouldn't be forced into one interpretation. |
 | Action | Expected-utility **regret** of the chosen move under the reference distribution; harmful-move rate (EU < −.15). The utilities U[move][intent] are an authored hypothesis (`social/domains.py`). | Good moves are good *under uncertainty*. A low-pressure clarification can be optimal even when the reading is unsure. |
 | Interaction outcome | Return and outcome in the RL environments (plan confirmed, graceful close, coerced yes, withdrawal, …). | Outcomes depend on the interlocutor, not only on the agent's single move. |
 
@@ -33,7 +33,7 @@ The four are related and empirically dissociable. On the Soft No, the base model
   - why that hidden state matters for action.
 - Every counterfactual must move the reference (TVD ≥ .08, enforced by a test). Some moves are deliberately subtle.
 - All personal-life domains: friendship, dating, family, group chats. No workplace hierarchy.
-- **Not human consensus.** These are synthetic, authored judgements, used as a held-out test set written by a different process from the training data.
+- **Not human consensus.** These are synthetic, authored judgments, used as a held-out test set written by a different process from the training data.
 
 ### 3.2 Latent Social State Model (LSSM, `social/lssm.py`)
 
@@ -59,7 +59,7 @@ The 12 manipulable factors are:
 - directness (a manipulation check that changes the words);
 - social pressure.
 
-There is also a **placebo control**: an irrelevant detail of similar length, whose hypothesised effect is zero.
+There is also a **placebo control**: an irrelevant detail of similar length, whose hypothesized effect is zero.
 
 - Levels render as explicit context sentences with paraphrases.
 - *Cultural context is only ever an explicitly stated norm* ("In your friend group, 'I'll let you know' is a gentle no"). It is never inferred from nationality or identity.
@@ -71,16 +71,16 @@ There is also a **placebo control**: an irrelevant detail of similar length, who
 - **Environments.** The Soft No and Are We on the Same Page? are the flagships; Group Chat, Family Subtext and It's Fine are also fully runnable.
 - **Hidden state:** intent sampled from the LSSM prior, patience, friction.
 - **Interlocutor:** an authored stochastic policy P(response | intent, move). Responses can reveal the intent, end the episode, or raise friction. Repeated clarification costs more each time.
-- **Observable posterior.** Because the interlocutor policy is known, the environment computes the **exact Bayes posterior** over intents from observable events only. Clarification and over-assumption rewards condition on *this*, so an agent is never penalised for not knowing what it couldn't know.
+- **Observable posterior.** Because the interlocutor policy is known, the environment computes the **exact Bayes posterior** over intents from observable events only. Clarification and over-assumption rewards condition on *this*, so an agent is never penalized for not knowing what it couldn't know.
 - **Reward components** (weights configurable, every step logged):
 
-  | Component | What it rewards or penalises |
+  | Component | What it rewards or penalizes |
   |---|---|
   | pragmatic understanding | Log score of the submitted belief on the true intent, relative to uniform. A proper scoring rule. |
-  | boundary respect | Penalises pressure, more heavily when the intent is a refusal. |
-  | clarification | Rewards the first clarification under real uncertainty; penalises repeats. |
-  | excessive assumption | Penalises acting certain while the posterior is uncertain. |
-  | social friction | Penalises the friction a move creates. |
+  | boundary respect | Penalizes pressure, more heavily when the intent is a refusal. |
+  | clarification | Rewards the first clarification under real uncertainty; penalizes repeats. |
+  | excessive assumption | Penalizes acting certain while the posterior is uncertain. |
+  | social friction | Penalizes the friction a move creates. |
   | repair | Rewards moves that reduce built-up friction. |
   | task completion | Terminal outcome value, given the true intent. |
 
@@ -88,12 +88,12 @@ There is also a **placebo control**: an irrelevant detail of similar length, who
 
 ## 4. The pre-registered experiment (`training/experiment.py`)
 
-**Question.** Holding the base checkpoint, LoRA configuration, optimiser, seeds and *token budget* fixed, does the *kind* of experience selected change what the model learns?
+**Question.** Holding the base checkpoint, LoRA configuration, optimizer, seeds and *token budget* fixed, does the *kind* of experience selected change what the model learns?
 
 | Element | Specification |
 |---|---|
 | Base model | `Qwen/Qwen2.5-0.5B-Instruct`, chosen because full experiments with 3 seeds run on a laptop in about 2 h |
-| Candidate pool | 1,703 items, **training families only**:<br>• 7 utterance families in 3 domains, generated as contrast clusters (an anchor plus one-factor neighbours)<br>• 240 multi-turn Soft No decision points, each with the environment's exact posterior as target |
+| Candidate pool | 1,703 items, **training families only**:<br>• 7 utterance families in 3 domains, generated as contrast clusters (an anchor plus one-factor neighbors)<br>• 240 multi-turn Soft No decision points, each with the environment's exact posterior as target |
 | Arms | **random** (control) · **diversity** (k-center over TF-IDF) · **failure-targeted** (highest base-model loss, ≤ 2 per cluster) · **counterfactual-contrast** (whole clusters, ranked by how much a single factor moves the reference) · **isolated** (the random arm's experiences with relationship and history stripped). Plus **base**. |
 | Budget | 240k estimated tokens per arm; train tokens measured afterwards are reported per run |
 | Targets | Interpretation: 4 letters sampled from the reference posterior per item, each with a different option order (Monte-Carlo soft labels). Move: the best move under the reference. |
@@ -101,7 +101,7 @@ There is also a **placebo control**: an irrelevant detail of similar length, who
 | Evaluation | Next-token letter distribution, averaged over **all cyclic option orders**. Option order is always permuted in training, so position can't be learned and style can't score. |
 | Eval sets (family-level split) | **ID:** held-out *cells* of training families (no shared factor assignment, unseen variants), 224 items<br>**OOD-family:** unseen utterances in seen domains ("We'll see!", "We don't need a label", "all good 👍"), 168<br>**OOD-domain:** the entire family-subtext domain, 168<br>**Hand-written:** 53<br>Plus a 40-item general-knowledge regression tripwire |
 
-**Hypotheses** (primary outcome: mean cross-entropy to the reference on the pooled generalisation sets — OOD-family ∪ OOD-domain ∪ hand-written, n = 389):
+**Hypotheses** (primary outcome: mean cross-entropy to the reference on the pooled generalization sets — OOD-family ∪ OOD-domain ∪ hand-written, n = 389):
 
 - **H1 (contrast).** Counterfactual-contrast < random. H₀: equal.
 - **H2 (context).** Random (context-rich) < isolated (same experiences, context stripped). H₀: equal.
@@ -136,7 +136,7 @@ An arm that only reaches the utterance prior has learned the words, not the soci
 <!-- RESULTS -->
 **Experiment `social-sft-v1`** — REAL MEASUREMENT — local LoRA fine-tuning and evaluation of Qwen/Qwen2.5-0.5B-Instruct. Seeds completed: 0, 1, 2. Budget 240k tokens per arm. Eval items: ID (held-out cells) 224, Unseen families 168, Unseen domain 168, Hand-written 53.
 
-**Pre-registered tests** (Δ cross-entropy, treatment − control, pooled generalisation sets; negative = treatment better):
+**Pre-registered tests** (Δ cross-entropy, treatment − control, pooled generalization sets; negative = treatment better):
 
 | Hypothesis | Δ (nats) | 95% CI | p | p (Holm) |
 |---|---|---|---|---|
@@ -222,7 +222,7 @@ vs base: Contrast -0.239 [-0.27, -0.21]; Diversity -0.219 [-0.25, -0.19]; Failur
 
 ### 5.1 Interpretation (3 seeds, real runs)
 
-1. **Every SFT arm makes the model less confidently wrong.** Each arm cuts KL against the base model by about 0.20–0.24 nats on the generalisation sets. Much of that is calibration: the base model is *worse than uniform* on three of the four sets.
+1. **Every SFT arm makes the model less confidently wrong.** Each arm cuts KL against the base model by about 0.20–0.24 nats on the generalization sets. Much of that is calibration: the base model is *worse than uniform* on three of the four sets.
 2. **H1 supported: contrast beats random.** Counterfactual-contrast clusters beat random selection at the same token budget: Δ = −0.016 nats [−0.022, −0.010], Holm p < .001. The effect is small, but it shows up where the hypothesis says it should:
    - the contrast arm's beliefs **move with context**, with context sensitivity r = 0.59 in-distribution and 0.40 on unseen families, against 0.43 and 0.27 for random;
    - its sensitivity ratio is 0.23 against 0.13.
@@ -247,7 +247,7 @@ Written as a NeurIPS/ICLR reviewer would read it, after the system worked end to
 **T1. Circularity: the model is trained toward, and evaluated against, the same authored hypothesis.**
 - **The problem.** Template targets and template references both come from the LSSM, so in-distribution gains measure "learned the LSSM", not "learned human pragmatics".
 - **Changes made:**
-  - The hand-written corpus, whose references come from per-scenario authored judgement and not from the LSSM, is a separate eval set that is never trained on.
+  - The hand-written corpus, whose references come from per-scenario authored judgment and not from the LSSM, is a separate eval set that is never trained on.
   - The unseen *domain* (family subtext) shares no utterances with training.
   - All UI and paper language says "agreement with the hypothesis" for template sets.
   - A human-annotation pipeline is defined (`scripts/export_annotation_batch.py`, `data/eval/human_annotations.schema.json`): 100-point allocations over readings, observable text only. The analysis code already reports human–model divergence when the file exists.
@@ -259,30 +259,30 @@ Written as a NeurIPS/ICLR reviewer would read it, after the system worked end to
   - Added a POMDP planner (Monte-Carlo lookahead on the known interlocutor model, sampling intents from the observable posterior only).
   - With action reward alone, it beats the best constant move in **all five** environments: Soft No 1.08 vs 0.89, Same Page 0.95 vs 0.60, Group Chat 0.87 vs 0.80, Family 1.24 vs 0.97, It's Fine 1.16 vs 0.93 (n = 150 episodes).
   - This is now a test (`test_inference_pays_even_without_belief_reward`).
-  - The UI audit includes deferential and over-apologising policies as hacking probes, and they score poorly.
-  - The so-called "oracle" is also greedy, so it was relabelled "greedy oracle". It is *not* an upper bound.
+  - The UI audit includes deferential and over-apologizing policies as hacking probes, and they score poorly.
+  - The so-called "oracle" is also greedy, so it was relabeled "greedy oracle". It is *not* an upper bound.
 - **Remaining.**
   - Margins are modest, so inference pays mostly through multi-turn dynamics.
-  - The response tables are authored and untested against human behaviour.
+  - The response tables are authored and untested against human behavior.
   - Simulator validity is the weakest link: the environment is a controlled testbed, not a model of people.
 
 **T3. Confounding in contextual interventions.**
 - **The problem.** Adding a factor sentence adds length, salience and position as well as information.
 - **Changes made:**
-  - A **placebo factor** (an irrelevant detail of similar length; hypothesised effect zero) so "more text" can be separated from "informative context".
-  - Surface variants randomise names, paraphrases, sentence order and the utterance's surface form, and serve as **clusters** for inference.
+  - A **placebo factor** (an irrelevant detail of similar length; hypothesized effect zero) so "more text" can be separated from "informative context".
+  - Surface variants randomize names, paraphrases, sentence order and the utterance's surface form, and serve as **clusters** for inference.
   - Paired within-variant contrasts.
   - Incoherent cells are excluded rather than rendered. OLS handles the resulting imbalance.
 - **Measured result.** On the base model, the placebo effect is −0.4 pp (CI −0.8 to +0.1). History, however, has no effect either, which is the finding (§5).
 - **Remaining.** Factor *wording* is still author-chosen. A stronger design would sample factor paraphrases from several writers.
 
-**T4. Data leakage and selection artefacts.**
+**T4. Data leakage and selection artifacts.**
 - **Leakage controls:**
   - split at the family level (no family overlap with OOD or hand-written sets; no shared *cell* with ID);
   - targets from posteriors, never hidden intents;
   - a leakage scanner for latent identifiers in model-visible text;
   - near-duplicate checks across splits.
-- **The selection artefact.** Failure-targeted selection over-selects the explicit-utterance *manipulation-check* items and one domain: 61% polite-no targets, flagged by the diagnostics. High base-model loss partly reflects how extreme the label is, not how useful the item is.
+- **The selection artifact.** Failure-targeted selection over-selects the explicit-utterance *manipulation-check* items and one domain: 61% polite-no targets, flagged by the diagnostics. High base-model loss partly reflects how extreme the label is, not how useful the item is.
 - **Changes made.** Imbalance warnings are surfaced in the UI and saved with every run. Arm sizes in items are reported, since matched tokens don't mean matched examples: the isolated arm has 2× more, shorter items.
 
 **T5. Teaching style or label priors instead of inference.**
@@ -295,13 +295,13 @@ Written as a NeurIPS/ICLR reviewer would read it, after the system worked end to
   - The isolated arm (H2) directly tests whether context is used.
   - The pilot also showed eval-time letter-position bias inflating action regret. Action distributions are now averaged over *all* cyclic orders.
 
-**T6 (power).** Three seeds and about 389 generalisation items. CIs are bootstrapped over items with seed-averaged predictions, so they understate seed variance; seed values are therefore shown separately. Effects smaller than about 0.02 nats are not resolvable.
+**T6 (power).** Three seeds and about 389 generalization items. CIs are bootstrapped over items with seed-averaged predictions, so they understate seed variance; seed values are therefore shown separately. Effects smaller than about 0.02 nats are not resolvable.
 
 ## 7. Limitations
 
 - **Synthetic data.** All scenarios and references are synthetic. Nothing here measures human preferences or human psychology.
-- **Cultural variation.** Norms are explicit, situational sentences. Real communities vary in ways this can't capture, and generalising "norms" from these templates would be wrong.
-- **Annotation disagreement.** It's modelled as reference *distributions*, but the distributions are authored, not measured, and inter-annotator structure is unknown.
+- **Cultural variation.** Norms are explicit, situational sentences. Real communities vary in ways this can't capture, and generalizing "norms" from these templates would be wrong.
+- **Annotation disagreement.** It's modeled as reference *distributions*, but the distributions are authored, not measured, and inter-annotator structure is unknown.
 - **Simulator validity.** The interlocutor tables are hypotheses. Agents that exploit them may not transfer.
 - **Distribution shift.** Template-to-hand-written is a real shift but narrow: one author, English, text messaging.
 - **Scale.** A 0.5B model is a compute-bounded testbed. Effects at larger scale may differ in size and even in sign.

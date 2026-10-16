@@ -1,7 +1,7 @@
 """Reference policies and the reward audit.
 
 The audit answers the question a skeptical reviewer should ask of any social
-reward: *what does it actually incentivise?* We roll out a fixed battery of
+reward: *what does it actually incentivize?* We roll out a fixed battery of
 policies on matched seeds:
 
 * constant policies (always pressure, always clarify, always release, ...)

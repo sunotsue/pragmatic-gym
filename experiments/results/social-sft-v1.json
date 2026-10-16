@@ -3263,7 +3263,7 @@
   "H1_contrast_vs_random": {
    "treatment": "counterfactual_contrast",
    "control": "random",
-   "metric": "cross-entropy to reference (nats), pooled generalisation sets",
+   "metric": "cross-entropy to reference (nats), pooled generalization sets",
    "diff_treat_minus_control": -0.015950473568214503,
    "ci": [
     -0.021939838605568304,
@@ -3276,7 +3276,7 @@
   "H2_context_vs_isolated": {
    "treatment": "random",
    "control": "isolated",
-   "metric": "cross-entropy to reference (nats), pooled generalisation sets",
+   "metric": "cross-entropy to reference (nats), pooled generalization sets",
    "diff_treat_minus_control": -0.0052460104624623164,
    "ci": [
     -0.009124559722806798,
@@ -3289,7 +3289,7 @@
   "H3_failure_vs_random": {
    "treatment": "failure_targeted",
    "control": "random",
-   "metric": "cross-entropy to reference (nats), pooled generalisation sets",
+   "metric": "cross-entropy to reference (nats), pooled generalization sets",
    "diff_treat_minus_control": 0.02630378124992884,
    "ci": [
     0.0030992667448860685,

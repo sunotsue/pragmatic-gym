@@ -5,7 +5,7 @@ can ask for in a demo (Explorer scenarios, the corpus diagnosis, Counterfactual
 Lab presets and single-factor sweeps, and model-played Playground episodes) and
 saves each result keyed by a hash of the exact observable input. The API then
 serves those results, so no model runs while the app is in use. The numbers are
-real model outputs, labelled as recorded with their recording date.
+real model outputs, labeled as recorded with their recording date.
 
 Set PGYM_LIVE=1 to run models live instead.
 """

@@ -24,7 +24,7 @@ from pgym.social.domains import get_domain
 from pgym.social.lssm import normalized_entropy
 
 EPS = 1e-6
-AMBIGUOUS_H = 0.80   # normalised entropy above which an item is "genuinely ambiguous"
+AMBIGUOUS_H = 0.80   # normalized entropy above which an item is "genuinely ambiguous"
 DECISIVE_P = 0.45    # reference top-1 mass needed for top-1 accuracy to be meaningful
 DECISIVE_MARGIN = 0.10
 

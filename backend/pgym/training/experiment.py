@@ -4,7 +4,7 @@ Pre-registered comparison (see RESEARCH.md §4):
 
   H1  At a matched token budget, counterfactual-contrast training reduces
       cross-entropy to the reference interpretation distribution on the
-      *generalisation* sets (unseen families, unseen domain, hand-written)
+      *generalization* sets (unseen families, unseen domain, hand-written)
       more than random selection.            H0: no difference.
   H2  Context-rich examples beat the same experiences with context stripped
       ("isolated"), at the same token budget. H0: no difference.
@@ -29,7 +29,7 @@ from pgym.selection.pool import POOL_DIR, read_jsonl
 from pgym.social.domains import get_domain
 
 EVAL_SPLITS = ["eval_id", "eval_ood_family", "eval_ood_domain", "eval_handwritten"]
-GENERALISATION = ["eval_ood_family", "eval_ood_domain", "eval_handwritten"]
+GENERALIZATION = ["eval_ood_family", "eval_ood_domain", "eval_handwritten"]
 RUNS = EXPERIMENTS_DIR / "runs"
 RESULTS = EXPERIMENTS_DIR / "results"
 
@@ -197,11 +197,11 @@ def aggregate(exp_id: str, arms: dict[str, list[dict]], meta: dict) -> dict:
                     caps.setdefault(c, []).append(v)
             d["cross_entropy_by_capability"] = {c: float(np.mean(v)) for c, v in caps.items()}
             summary[a]["splits"][s] = d
-    # hypothesis tests on the pooled generalisation sets
+    # hypothesis tests on the pooled generalization sets
     ce = {a: _avg_preds(runs) for a, runs in arms.items()}
 
     def pooled(a):
-        return sum((ce[a][s] for s in GENERALISATION), [])
+        return sum((ce[a][s] for s in GENERALIZATION), [])
 
     tests, pvals = {}, {}
     for name, (treat, ctrl) in {"H1_contrast_vs_random": ("counterfactual_contrast", "random"),
@@ -210,7 +210,7 @@ def aggregate(exp_id: str, arms: dict[str, list[dict]], meta: dict) -> dict:
         if treat in ce and ctrl in ce:
             # diff = treat - ctrl in cross-entropy (negative = treatment better)
             r = paired_bootstrap_diff(pooled(ctrl), pooled(treat))
-            tests[name] = {"treatment": treat, "control": ctrl, "metric": "cross-entropy to reference (nats), pooled generalisation sets",
+            tests[name] = {"treatment": treat, "control": ctrl, "metric": "cross-entropy to reference (nats), pooled generalization sets",
                            "diff_treat_minus_control": r["mean"], "ci": [r["lo"], r["hi"]], "p_value": r["p_value"], "n_items": r["n"]}
             pvals[name] = r["p_value"]
     for name, p in holm(pvals).items():

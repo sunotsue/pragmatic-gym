@@ -2,8 +2,8 @@
 
 Splits
 ------
-train pool          template items from TRAIN families only, organised as
-                    contrast clusters (anchor + one-factor neighbours), plus
+train pool          template items from TRAIN families only, organized as
+                    contrast clusters (anchor + one-factor neighbors), plus
                     multi-turn states harvested from Soft No rollouts
 eval_id             TRAIN families, but held-out *cells* (no factor assignment
                     that appears in the pool) and held-out variants
@@ -41,7 +41,7 @@ def _random_levels(domain: str, rng: random.Random) -> dict[str, str]:
             if f.group == "utterance":
                 lv[f.id] = "explicit" if rng.random() < 0.08 else "indirect"  # rare manipulation-check items
             else:
-                # bias towards default to keep stories readable: ~45% of factors stay at default
+                # bias toward default to keep stories readable: ~45% of factors stay at default
                 lv[f.id] = f.default if rng.random() < 0.45 else rng.choice(f.level_ids)
         lv = full_levels(domain, lv)
         if not violations(lv, domain):
@@ -49,7 +49,7 @@ def _random_levels(domain: str, rng: random.Random) -> dict[str, str]:
     raise RuntimeError("could not sample a valid assignment")
 
 
-def _neighbours(domain: str, lv: dict[str, str], rng: random.Random, k: int = 2) -> list[tuple[str, dict]]:
+def _neighbors(domain: str, lv: dict[str, str], rng: random.Random, k: int = 2) -> list[tuple[str, dict]]:
     facs = [f for f in factors_for(domain) if f.group not in ("utterance", "placebo")]
     rng.shuffle(facs)
     out = []
@@ -106,7 +106,7 @@ def build_train_pool(clusters_per_family: int = 70, seed: int = 0, rollout_state
             cid = f"{fam.id}:c{c}"
             anchor = render(fam.id, lv, variant=variant, split="train")
             items.append(item_from_scenario(anchor, split="train", cluster=cid))
-            for fid, nb in _neighbours(fam.domain, lv, rng):
+            for fid, nb in _neighbors(fam.domain, lv, rng):
                 s = render(fam.id, nb, variant=variant, split="train")
                 items.append(item_from_scenario(s, split="train", cluster=cid, contrast_factor=fid))
     items += harvest_rollout_states(rollout_states, seed=seed + 1)
@@ -120,12 +120,12 @@ def build_train_pool(clusters_per_family: int = 70, seed: int = 0, rollout_state
 
 
 def harvest_rollout_states(n: int, seed: int = 1) -> list[dict]:
-    """Multi-turn decision points from Soft No episodes (behaviour policy: random).
+    """Multi-turn decision points from Soft No episodes (behavior policy: random).
 
     The target at a mid-episode state is the *observable posterior* given the
     whole transcript (the env's exact Bayes filter) — never the sampled hidden
     intent — so the training signal is calibrated by construction. Reward
-    components and outcome of the behaviour action are preserved for audit.
+    components and outcome of the behavior action are preserved for audit.
     """
     from pgym.scenarios.schema import Reference
     from pgym.social.domains import get_domain
@@ -141,8 +141,8 @@ def harvest_rollout_states(n: int, seed: int = 1) -> list[dict]:
         ep += 1
         steps = 0
         while not env.done and steps < 3:
-            behaviour = rng.choice(dom.action_ids)
-            obs, r, term, trunc, info = env.step({"action": behaviour})
+            behavior = rng.choice(dom.action_ids)
+            obs, r, term, trunc, info = env.step({"action": behavior})
             steps += 1
             if env.done:
                 break
@@ -157,7 +157,7 @@ def harvest_rollout_states(n: int, seed: int = 1) -> list[dict]:
             })
             bayes = policy_bayes(env, obs)
             out.append(item_from_scenario(scen, split="train", source="rollout", extra={
-                "turn": steps, "turn_tag": f"t{steps}", "behaviour_action": behaviour,
+                "turn": steps, "turn_tag": f"t{steps}", "behaviour_action": behavior,
                 "behaviour_reward_components": info["last"]["components"], "behaviour_response": info["last"]["response"],
                 "bayes_action": bayes["action"],
             }))
@@ -180,7 +180,7 @@ def build_eval_sets(seed: int = 100, n_per_family: int = 40, pool_cells: set[str
                 continue
             variant = rng.randrange(6, 9)  # variants never used in the pool
             cid = f"{fam.id}:e{made}"
-            group = [(None, lv)] + _neighbours(fam.domain, lv, rng)
+            group = [(None, lv)] + _neighbors(fam.domain, lv, rng)
             if split == "eval_id" and any((fam.id + "|" + cell_key(g[1])) in pool_cells for g in group):
                 continue
             for fid, g in group:

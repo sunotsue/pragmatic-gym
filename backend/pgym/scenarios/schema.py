@@ -3,7 +3,7 @@
 The single most important invariant in Pragmatic Gym: a scenario has an
 *observable* view (what a model, an agent or a training example may contain)
 and a *latent* view (hidden state, reference labels, design metadata) that is
-only ever shown in the authorised researcher panel. `Scenario.observable()` is
+only ever shown in the authorized researcher panel. `Scenario.observable()` is
 the only function prompt builders and data exporters are allowed to call.
 """
 from __future__ import annotations

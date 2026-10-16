@@ -2,7 +2,7 @@
 
 Outcome Y = the model's probability on a chosen interpretation (e.g. P(polite
 no)). For every estimand we report the model's estimate with a cluster
-bootstrap CI (clusters = surface variants) *and* the hypothesised effect
+bootstrap CI (clusters = surface variants) *and* the hypothesized effect
 implied by the authored LSSM, so one can ask both "does context move the
 model?" and "does it move the model the way the hypothesis says it should?".
 """
@@ -162,7 +162,7 @@ def cell_table(df: pd.DataFrame, design: dict) -> list[dict]:
 
 
 def sensitivity(cells: list[dict]) -> dict:
-    """Across cells: slope of model outcome on hypothesised outcome (1 = matches the hypothesis' sensitivity)."""
+    """Across cells: slope of model outcome on hypothesized outcome (1 = matches the hypothesis' sensitivity)."""
     if len(cells) < 3:
         return {"slope": None, "corr": None}
     x = np.array([c["y_ref"] for c in cells])
@@ -231,5 +231,5 @@ def analyze(design: dict, results: list[dict]) -> dict:
         "variance": variance_decomposition(df),
         "sensitivity": sensitivity(cells),
         "human": human_divergence(design, cells),
-        "caveat": "Estimates are effects of randomized prompt interventions on model behaviour, not causal effects on human interpretation.",
+        "caveat": "Estimates are effects of randomized prompt interventions on model behavior, not causal effects on human interpretation.",
     }

@@ -7,9 +7,9 @@ Backends
                      llama.cpp server, LM Studio, ...). Configure with
                      PGYM_OPENAI_BASE_URL / PGYM_OPENAI_MODEL.
 * ``replay``         Re-serves a *recorded real inference* from
-                     data/fixtures/recorded_inference.jsonl, labelled as a replay
+                     data/fixtures/recorded_inference.jsonl, labeled as a replay
                      with the original model, timestamp and prompt hash.
-* ``fixture``        A deterministic heuristic stand-in. NOT a model. Labelled
+* ``fixture``        A deterministic heuristic stand-in. NOT a model. Labeled
                      `is_real_inference = False` everywhere it is shown.
 
 Every result carries a `Provenance` record; the UI renders it next to any

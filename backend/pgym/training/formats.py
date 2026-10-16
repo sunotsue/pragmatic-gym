@@ -5,7 +5,7 @@ deliberate: evaluation reads the model's *next-token distribution* over
 option letters, so
 
 * the measured interpretation distribution is the model's actual predictive
-  distribution, not a verbalised number, and
+  distribution, not a verbalized number, and
 * reply style (length, hedging, apologies) cannot influence the score at all.
 
 Option order is permuted (seeded) so neither training nor evaluation can

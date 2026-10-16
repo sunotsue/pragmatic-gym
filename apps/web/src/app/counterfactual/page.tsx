@@ -224,7 +224,7 @@ export default function CounterfactualLab() {
 
           {scen?.latent && (
             <div className="mt-6">
-              <SectionTitle aside={<SyntheticTag>LSSM hypothesis · {scen.latent.reference.version}</SyntheticTag>}>Hypothesised reading of this cell</SectionTitle>
+              <SectionTitle aside={<SyntheticTag>LSSM hypothesis · {scen.latent.reference.version}</SyntheticTag>}>Hypothesized reading of this cell</SectionTitle>
               {dom && <DistributionRows labels={dom.interpretations} reference={scen.latent.reference.distribution} model={null} />}
               <details className="mt-3">
                 <summary className="cursor-pointer t-small font-bold">Audit trail: logit contributions</summary>

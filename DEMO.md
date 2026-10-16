@@ -1,4 +1,4 @@
-# Live demo — 6 minutes
+# Live demo — 7 minutes
 
 **Setup (before the talk).**
 - Run `make dev` and open http://localhost:3000 at 1440 wide.
@@ -26,13 +26,13 @@ Every number below is a real Qwen2.5-0.5B-Instruct output, recorded by `scripts/
 
 1. Open **02 Counterfactual Lab**, preset **History × audience**.
    - Click levels in the right column; the conversation on the left re-renders instantly, with the manipulated sentences highlighted.
-   - **Say:** *"The utterance is fixed. Only who-said-it-after-what changes. Names, paraphrases and punctuation are randomised surface variants, and they're my clusters for inference."*
-2. Click **Run experiment (24 prompts)**. It takes about 15 s and the result is real.
-   - **Sensitivity slope ≈ 0.06.** The hypothesis moves P(polite no) from 6% to 53% across cells; the model stays at 6–9%.
-   - **Context vs wording.** In this run wording and names explain about as much variance as social history does. In the 6-variant run (*prior pattern × placebo*), **wording explained 53% and context 6%**.
-   - Forest plot: *repeated disappointment* +2 pp for the model vs +25 pp hypothesised.
-3. Optional: switch the preset to **Manipulation check**. Making the utterance explicit ("Thanks, but I'm going to pass on this one") moves P(polite no) by **+21 pp** against +71 pp hypothesised, while *established trust* moves it −0.5 pp against −12.5 pp. The model partly reads words; it hardly reads relationships.
-   - **Say:** *"These are randomised interventions on model behaviour, not claims about humans. The ink ticks are an authored hypothesis, and there's a slot for human distributions."*
+   - **Say:** *"The utterance is fixed. Only who-said-it-after-what changes. Names, paraphrases and punctuation are randomized surface variants, and they're my clusters for inference."*
+2. Click **Run experiment (24 prompts)**. The result is a real model run, replayed from the recording, so it appears instantly.
+   - **Sensitivity slope ≈ 0.06.** The hypothesis moves P(polite no) from 6% to 53% across cells; the model stays at 6–10%.
+   - **Context vs wording.** In this run context explains 59% of the model's variance and wording 21%. In the 6-variant run (*History vs placebo*), it flips: **wording explains 56% and context 6%**.
+   - Forest plot: *repeated disappointment* +2 pp for the model vs +26 pp hypothesized.
+3. Optional: switch the preset to **Manipulation check**. Making the utterance explicit ("Thanks, but I'm going to pass on this one") moves P(polite no) by **+22 pp** against +71 pp hypothesized, while *established trust* moves it −0.6 pp against −12.5 pp. The model partly reads words; it hardly reads relationships.
+   - **Say:** *"These are randomized interventions on model behavior, not claims about humans. The ink ticks are an authored hypothesis, and there's a slot for human distributions."*
 
 ### 2:30–4:00 · Consequences (Social RL Playground)
 
@@ -46,10 +46,10 @@ Every number below is a real Qwen2.5-0.5B-Instruct output, recorded by `scripts/
 ### 4:00–5:30 · Turn the failure into an intervention (Data Intervention Lab)
 
 1. Open **04 Data Intervention Lab**.
-   - The failure profile of the base model on 1,703 pool items (live): mostly **misread**, then underconfident and literal readings.
+   - The failure profile of the base model on 1,703 pool items: mostly **misread**, then underconfident and literal readings.
 2. Click the strategies; the comparison table updates at the same **240k-token budget**.
    - **Counterfactual contrast** selects whole clusters: the same conversation with one social fact changed, ranked by how much that fact should move the reading.
-   - **Failure-targeted** shows an honest artefact: it over-selects manipulation-check items (a 61% polite-no imbalance warning).
+   - **Failure-targeted** shows an honest artifact: it over-selects manipulation-check items (a 61% polite-no imbalance warning).
    - **Isolated** strips relationship and history from the same experiences. It's the ablation for *"does context-rich data teach more than isolated refusals?"*
 3. Open an example: you see *why it was included*, the base model's dots against the target posterior, and the leakage, duplicate and overlap checks (0 leaks, no family overlap with held-out sets).
 4. Click **Export JSONL** to get SFT prompt/completion rows plus preference pairs, with provenance.
@@ -57,7 +57,7 @@ Every number below is a real Qwen2.5-0.5B-Instruct output, recorded by `scripts/
 ### 5:30–7:00 · Did it work, and what's next (Results)
 
 1. Open **05 Post-Training & Results** (`social-sft-v1`). The black bar says *REAL MEASUREMENT*. Every arm uses the same checkpoint, LoRA config and budget, and 3 seeds.
-2. Read the **pre-registered comparisons** H1–H3 (Δ cross-entropy with 95% CI and Holm-corrected p). Then switch the metric to **Context sensitivity r** and **Sensitivity ratio**, and show the grey **non-learned baselines**.
+2. Read the **pre-registered comparisons** H1–H3 (Δ cross-entropy with 95% CI and Holm-corrected p). Then switch the metric to **Context sensitivity r** and **Sensitivity ratio**, and show the gray **non-learned baselines**.
    - **Say:** *"The first thing SFT learns is humility. Loss drops partly because the model stops being confidently wrong. The question that matters is whether beliefs start moving with context. That's the sensitivity row, and that's where the arms differ."* Then the result, 3 seeds:
    - **Contrast beats random:** −0.016 nats, Holm p < .001.
    - **Context-rich beats isolated:** −0.005, p = .024.
@@ -72,4 +72,4 @@ Every number below is a real Qwen2.5-0.5B-Instruct output, recorded by `scripts/
 **If something breaks.**
 - **Backend offline:** the header shows it. Run `make dev`.
 - **"Not recorded" message:** pick a preset in the Counterfactual Lab, or compare a single variable on its own.
-- **No network:** everything except Hugging Face downloads works offline. The fixture backend is clearly labelled and should only be used to show UI flow, never to quote numbers.
+- **No network:** everything except Hugging Face downloads works offline. The fixture backend is clearly labeled and should only be used to show UI flow, never to quote numbers.

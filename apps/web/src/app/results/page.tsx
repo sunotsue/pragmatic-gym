@@ -112,7 +112,7 @@ export default function Results() {
                         <div className="num mt-4 text-[34px] font-medium leading-none tracking-[-0.04em]">{t.diff_treat_minus_control >= 0 ? "+" : "−"}{Math.abs(t.diff_treat_minus_control).toFixed(3)}<span className="ml-1 text-[14px] text-ink-2">nats</span></div>
                         <div className="num mt-1 t-small text-ink-2">95% CI [{t.ci[0].toFixed(3)}, {t.ci[1].toFixed(3)}] · p = {t.p_value < 0.001 ? "<.001" : t.p_value.toFixed(3)}{t.p_holm != null && ` · Holm ${t.p_holm < 0.001 ? "<.001" : t.p_holm.toFixed(3)}`}</div>
                         <div className={cn("mt-3 inline-block px-2 py-[2px] t-small font-bold", verdict(t).hot ? "bg-hot text-paper" : "bg-wash")}>{verdict(t).text}</div>
-                        <p className="mt-2 t-micro text-ink-3">Δ cross-entropy (treatment − control), pooled generalisation sets, n = {t.n_items}. Negative = treatment better.</p>
+                        <p className="mt-2 t-micro text-ink-3">Δ cross-entropy (treatment − control), pooled generalization sets, n = {t.n_items}. Negative = treatment better.</p>
                       </>
                     ) : <p className="mt-3 t-small text-ink-3">Planned — arm not yet trained.</p>}
                   </div>
@@ -182,7 +182,7 @@ export default function Results() {
                   ))}
                 </tbody>
               </table>
-              {(metric === "kl" || metric === "top1_decisive") && <p className="mt-2 t-micro text-ink-3">Grey rows bound what is achievable without reading context. An arm that only matches the utterance-only prior has learned the words, not the social situation.</p>}
+              {(metric === "kl" || metric === "top1_decisive") && <p className="mt-2 t-micro text-ink-3">Gray rows bound what is achievable without reading context. An arm that only matches the utterance-only prior has learned the words, not the social situation.</p>}
             </div>
           </section>
 
@@ -208,7 +208,7 @@ export default function Results() {
                   })}
                 </tbody>
               </table>
-              <p className="mt-2 t-micro text-ink-3">Shading: improvement (accent) or regression (grey) relative to the base model.</p>
+              <p className="mt-2 t-micro text-ink-3">Shading: improvement (accent) or regression (gray) relative to the base model.</p>
             </div>
             <div>
               <SectionTitle aside="40-item general MCQ tripwire">Regression on unrelated capabilities</SectionTitle>
