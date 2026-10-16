@@ -109,7 +109,7 @@ export default function HeadOfData() {
         <div className="rule-heavy" />
         <div className="grid grid-cols-1 gap-14 pt-6">
           <div className="min-w-0">
-            <SectionTitle aside="today">The broken model</SectionTitle>
+            <SectionTitle>The broken model</SectionTitle>
             <BrokenModel />
             <p className="mt-6 t-lead text-ink">Research intent gets diluted across organizational boundaries.</p>
             <p className="mt-2 max-w-[640px] t-small text-ink-2">
