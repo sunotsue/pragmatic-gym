@@ -1,6 +1,6 @@
 # Pragmatic Gym
 
-**A research workbench for teaching language models social intelligence through interaction rather than more transcripts.**
+**A research workbench for teaching language models social intelligence through interaction.**
 
 > *“That sounds fun. I'll let you know!”* might be genuine enthusiasm, a polite no, a way of keeping options open, or truly undecided. People resolve this from relationship, shared history, audience and stakes. Pragmatic Gym asks three questions:
 > - Can models learn to make the same inference?
