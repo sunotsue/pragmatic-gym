@@ -1,0 +1,12 @@
+{
+  "selection_id": "f6b3505348",
+  "strategy": "counterfactual_contrast",
+  "budget": 240000,
+  "tokens_used": 236185,
+  "n_items": 114,
+  "n_sft": 570,
+  "n_pref": 114,
+  "seed": 1,
+  "include_context": true,
+  "sha1": "d990d35641c6"
+}

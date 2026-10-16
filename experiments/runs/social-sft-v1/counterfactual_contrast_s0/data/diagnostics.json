@@ -1,0 +1,163 @@
+{
+ "n": 114,
+ "tokens": 236185,
+ "leakage": {
+  "n_leaks": 0,
+  "examples": [],
+  "checked_patterns": [
+   "true_intent",
+   "private_state",
+   "lssm",
+   "patience",
+   "hidden",
+   "force_intent",
+   "reference_distribution",
+   "<snake_case intent, factor and level ids>"
+  ]
+ },
+ "duplicates": {
+  "exact": 0,
+  "near_jaccard_0.9": 2
+ },
+ "distribution": {
+  "target_interpretation": {
+   "soft_decline": 43,
+   "undecided": 21,
+   "genuinely_fine": 5,
+   "frustrated_pattern": 12,
+   "content_open": 5,
+   "avoiding_talk": 7,
+   "follow_through": 14,
+   "disappointed_understanding": 2,
+   "hurt_face_saving": 5
+  },
+  "target_action": {
+   "graceful_exit": 31,
+   "clarify_low_pressure": 42,
+   "acknowledge_wait": 5,
+   "acknowledge_and_repair": 24,
+   "share_own_view": 5,
+   "clarify_gently": 7
+  },
+  "domain": {
+   "invitation": 78,
+   "emotional": 24,
+   "relationship": 12
+  },
+  "family": {
+   "inv_think_about_it": 27,
+   "inv_maybe_schedule": 27,
+   "inv_let_you_know": 24,
+   "emo_its_fine": 12,
+   "rel_happy_how_things_are": 6,
+   "rel_like_what_we_have": 6,
+   "emo_no_worries": 12
+  },
+  "capability": {
+   "indirect_speech": 78,
+   "emotional_repair": 24,
+   "history_dependent": 12
+  },
+  "source": {
+   "template": 114
+  }
+ },
+ "overlap": {
+  "eval_id": {
+   "family_overlap": [
+    "emo_its_fine",
+    "emo_no_worries",
+    "inv_let_you_know",
+    "inv_maybe_schedule",
+    "inv_think_about_it",
+    "rel_happy_how_things_are",
+    "rel_like_what_we_have"
+   ],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": true
+  },
+  "eval_ood_family": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_ood_domain": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_handwritten": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  }
+ },
+ "factor_coverage": {
+  "relationship": {
+   "close_friend": 72,
+   "family_member": 18,
+   "romantic_interest": 12
+  },
+  "familiarity": {
+   "established": 107,
+   "acquaintance": 6,
+   "stranger": 1
+  },
+  "shared_history": {
+   "prior_conflict": 15,
+   "repeated_disappointment": 27,
+   "unspecified": 58,
+   "established_trust": 14
+  },
+  "stakes": {
+   "medium": 60,
+   "low": 31,
+   "high": 23
+  },
+  "comm_style": {
+   "unspecified": 78,
+   "indirect": 7,
+   "direct": 13,
+   "avoidant": 16
+  },
+  "prior_pattern": {
+   "none": 59,
+   "repeated": 24,
+   "once": 31
+  },
+  "audience": {
+   "private": 60,
+   "public": 19,
+   "group_chat": 35
+  },
+  "norms": {
+   "indirect_norm": 28,
+   "literal_norm": 29,
+   "unspecified": 57
+  },
+  "info_asymmetry": {
+   "symmetric": 67,
+   "asymmetric": 47
+  },
+  "commitment": {
+   "undefined": 72,
+   "explicit": 22,
+   "casual": 20
+  },
+  "directness": {
+   "indirect": 114
+  },
+  "social_pressure": {
+   "medium": 22,
+   "high": 15,
+   "low": 53
+  }
+ },
+ "warnings": [
+  "domain imbalance: 'invitation' is 68% of examples"
+ ]
+}

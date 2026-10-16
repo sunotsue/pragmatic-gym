@@ -1,0 +1,493 @@
+{
+ "selection_id": "9aee3149cc",
+ "strategy": "random",
+ "budget": 240000,
+ "tokens_used": 239595,
+ "seed": 0,
+ "target_failure": null,
+ "include_context": true,
+ "n": 120,
+ "info": "Uniform sample from the candidate pool. The control arm.",
+ "items": [
+  {
+   "id": "emo_its_fine::619247cd::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::16f4a3bc::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::5206ca9e::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::fce2776f::v2::ep23t3::t3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::8b6899e2::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::66d4be32::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::6afe76c1::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::4e9718db::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::2494a957::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::15a72713::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::7d246ab7::v1::ep58t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::99ae0d92::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::bf3ac03b::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::2fbe4f70::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::d77c497c::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::f5a57c8b::v0::ep3t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::56a8916b::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::96795412::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::2159a223::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::0409d44a::v1::ep253t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::6f88246a::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::9191d94d::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::7722752e::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::97b61ddd::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::7f82cf77::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::62b26b53::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::c5fcd16e::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::448fe1f8::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::8926518d::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::aa249dae::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::7bbc4fde::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::c708c5a4::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::2223cf8c::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::3801db29::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::8581d34d::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::5b188699::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::2be88f40::v1::ep103t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::82d89ba0::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::6df8b045::v1::ep178t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::22b034c0::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::6a9920f3::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::17121218::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::cbc8ed2f::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::3ab2d78e::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::655844c1::v0::ep21t2::t2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::5a7b7431::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::1cea6acb::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::1ab96e78::v0::ep12t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::6ac4ece1::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::7c314e87::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::816e6d9e::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::30caa4be::v0::ep156t2::t2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::30ab28af::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::b5ca13b6::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::de438272::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::b1c199bf::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::eb9294a7::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::5bd72647::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::a2860ba6::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::b12e8cc8::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::4d62acd3::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::2881f630::v1::ep22t2::t2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::5d4ad97b::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::1c3aa7a7::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::cc947622::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::ce49d72a::v0::ep120t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::d7314ddf::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::75696f66::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::6fcfab9e::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::23e1e562::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::5b7a4509::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::4d6f79c1::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::ec67cc25::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::c54abf18::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::defe182e::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::f4b8c35a::v1::ep208t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::b10fd656::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::5ebe4651::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::5aba2602::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::8e8609f8::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::42db6e8b::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::f2272a50::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::23588d91::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::3801db29::v2::ep203t2::t2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::75a1964e::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::837ac54a::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::51fc173d::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::1a9617cc::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::73c2fb40::v2",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::20958174::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::22e70cc2::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::b7d1c29f::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::0364d43e::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::54026b6e::v2::ep137t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::7691c21a::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::ffcdbfa4::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::642b2889::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::18355ada::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::b5c29eb9::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::a26dd034::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::a0e0c793::v1::ep187t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::07b8b0fb::v0::ep75t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::4431aea3::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::0bec96ea::v0::ep39t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::78854da4::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::db309747::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::fb54d28c::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::54a69830::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::05d91ac1::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::1566839e::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_its_fine::aef8a893::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_let_you_know::b47a4d10::v1::ep133t1::t1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_happy_how_things_are::d54153aa::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::06ac18de::v1",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_maybe_schedule::52641d9d::v5",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::14821ea0::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "rel_like_what_we_have::f1f35d2e::v0",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::0f3a7a10::v3",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "emo_no_worries::50d1776d::v4",
+   "reason": "Uniformly sampled (control)."
+  },
+  {
+   "id": "inv_think_about_it::73148fc1::v2",
+   "reason": "Uniformly sampled (control)."
+  }
+ ]
+}

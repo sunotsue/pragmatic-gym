@@ -1,0 +1,15 @@
+# The API deploys from the repo root; the web app deploys separately from apps/web.
+apps/
+docs/
+tests/
+scripts/
+backend/.venv/
+backend/*.egg-info/
+experiments/runs/
+experiments/counterfactual/
+experiments/datasets/
+experiments/diagnosis/
+experiments/*.sqlite
+data/fixtures/
+**/__pycache__/
+.env.local

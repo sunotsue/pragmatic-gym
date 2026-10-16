@@ -1,0 +1,168 @@
+{
+ "n": 120,
+ "tokens": 239595,
+ "leakage": {
+  "n_leaks": 0,
+  "examples": [],
+  "checked_patterns": [
+   "true_intent",
+   "private_state",
+   "lssm",
+   "patience",
+   "hidden",
+   "force_intent",
+   "reference_distribution",
+   "<snake_case intent, factor and level ids>"
+  ]
+ },
+ "duplicates": {
+  "exact": 0,
+  "near_jaccard_0.9": 0
+ },
+ "distribution": {
+  "target_interpretation": {
+   "hurt_face_saving": 9,
+   "undecided": 21,
+   "avoiding_talk": 6,
+   "prefers_status_quo": 4,
+   "disappointed_understanding": 8,
+   "frustrated_pattern": 7,
+   "soft_decline": 26,
+   "content_open": 19,
+   "genuinely_fine": 10,
+   "keeping_options": 2,
+   "follow_through": 8
+  },
+  "target_action": {
+   "acknowledge_and_repair": 33,
+   "clarify_low_pressure": 25,
+   "clarify_gently": 11,
+   "acknowledge_wait": 14,
+   "graceful_exit": 18,
+   "share_own_view": 18,
+   "take_face_value": 1
+  },
+  "domain": {
+   "emotional": 34,
+   "invitation": 57,
+   "relationship": 29
+  },
+  "family": {
+   "emo_its_fine": 18,
+   "inv_let_you_know": 30,
+   "rel_like_what_we_have": 15,
+   "inv_think_about_it": 16,
+   "emo_no_worries": 16,
+   "inv_maybe_schedule": 11,
+   "rel_happy_how_things_are": 14
+  },
+  "capability": {
+   "emotional_repair": 34,
+   "indirect_speech": 57,
+   "history_dependent": 29
+  },
+  "source": {
+   "template": 102,
+   "rollout": 18
+  }
+ },
+ "overlap": {
+  "eval_id": {
+   "family_overlap": [
+    "emo_its_fine",
+    "emo_no_worries",
+    "inv_let_you_know",
+    "inv_maybe_schedule",
+    "inv_think_about_it",
+    "rel_happy_how_things_are",
+    "rel_like_what_we_have"
+   ],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": true
+  },
+  "eval_ood_family": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_ood_domain": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_handwritten": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  }
+ },
+ "factor_coverage": {
+  "relationship": {
+   "family_member": 15,
+   "close_friend": 58,
+   "acquaintance": 8,
+   "romantic_interest": 10
+  },
+  "familiarity": {
+   "acquaintance": 17,
+   "established": 97,
+   "stranger": 6
+  },
+  "shared_history": {
+   "prior_conflict": 18,
+   "repeated_disappointment": 15,
+   "established_trust": 13,
+   "unspecified": 73,
+   "first_interaction": 1
+  },
+  "stakes": {
+   "medium": 70,
+   "high": 20,
+   "low": 30
+  },
+  "comm_style": {
+   "indirect": 19,
+   "unspecified": 66,
+   "direct": 22,
+   "avoidant": 13
+  },
+  "prior_pattern": {
+   "none": 83,
+   "repeated": 15,
+   "once": 22
+  },
+  "audience": {
+   "private": 78,
+   "group_chat": 24,
+   "public": 18
+  },
+  "norms": {
+   "unspecified": 78,
+   "literal_norm": 23,
+   "indirect_norm": 19
+  },
+  "info_asymmetry": {
+   "symmetric": 89,
+   "asymmetric": 31
+  },
+  "commitment": {
+   "undefined": 73,
+   "explicit": 24,
+   "casual": 23
+  },
+  "directness": {
+   "indirect": 108,
+   "explicit": 12
+  },
+  "social_pressure": {
+   "low": 54,
+   "medium": 17,
+   "high": 15
+  }
+ },
+ "warnings": []
+}

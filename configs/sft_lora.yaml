@@ -1,0 +1,26 @@
+# Matched training configuration shared by every SFT arm.
+# Only the *dataset* differs between arms; everything below is held fixed.
+base_model: Qwen/Qwen2.5-0.5B-Instruct
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+train:
+  epochs: 1                  # one pass: sampled labels approximate the soft-label loss only without memorisation
+  learning_rate: 2.0e-4
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  per_device_batch_size: 8
+  grad_accum: 1
+  max_length: 1024
+  weight_decay: 0.0
+  completion_only_loss: true   # loss only on the answer letter
+selection:
+  token_budget: 240000         # identical for every arm (isolated arm: same budget, shorter examples)
+  interp_samples_per_item: 4   # Monte-Carlo soft labels: targets sampled from the reference posterior
+eval:
+  dtype: float16
+  action_perms: 8             # >= number of moves: full cyclic averaging cancels letter-position bias
+seeds: [0, 1, 2]
+arms: [base, random, diversity, failure_targeted, counterfactual_contrast, isolated]

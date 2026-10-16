@@ -1,0 +1,147 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "seed": 0,
+  "n_examples": 985,
+  "train_tokens": 214640,
+  "epochs": 1,
+  "steps": 124,
+  "train_loss": 0.49923074533862455,
+  "loss_curve": [
+    {
+      "step": 5,
+      "loss": 0.6957599639892578
+    },
+    {
+      "step": 10,
+      "loss": 0.5507966041564941
+    },
+    {
+      "step": 15,
+      "loss": 0.4897000312805176
+    },
+    {
+      "step": 20,
+      "loss": 0.5188349723815918
+    },
+    {
+      "step": 25,
+      "loss": 0.5017134666442871
+    },
+    {
+      "step": 30,
+      "loss": 0.5257041931152344
+    },
+    {
+      "step": 35,
+      "loss": 0.6238992214202881
+    },
+    {
+      "step": 40,
+      "loss": 0.5102250099182128
+    },
+    {
+      "step": 45,
+      "loss": 0.48784704208374025
+    },
+    {
+      "step": 50,
+      "loss": 0.5184463500976563
+    },
+    {
+      "step": 55,
+      "loss": 0.5007299423217774
+    },
+    {
+      "step": 60,
+      "loss": 0.5032972812652587
+    },
+    {
+      "step": 65,
+      "loss": 0.48092021942138674
+    },
+    {
+      "step": 70,
+      "loss": 0.48521103858947756
+    },
+    {
+      "step": 75,
+      "loss": 0.4510404109954834
+    },
+    {
+      "step": 80,
+      "loss": 0.48301334381103517
+    },
+    {
+      "step": 85,
+      "loss": 0.4607364654541016
+    },
+    {
+      "step": 90,
+      "loss": 0.4937138557434082
+    },
+    {
+      "step": 95,
+      "loss": 0.5257354259490967
+    },
+    {
+      "step": 100,
+      "loss": 0.46553726196289064
+    },
+    {
+      "step": 105,
+      "loss": 0.4390744209289551
+    },
+    {
+      "step": 110,
+      "loss": 0.44221787452697753
+    },
+    {
+      "step": 115,
+      "loss": 0.4633604049682617
+    },
+    {
+      "step": 120,
+      "loss": 0.4204667568206787
+    }
+  ],
+  "runtime_s": 221.1,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "trl_torch_logprob_shim": false,
+  "train_config": {
+    "epochs": 1,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "per_device_batch_size": 8,
+    "grad_accum": 1,
+    "max_length": 1024,
+    "weight_decay": 0.0,
+    "completion_only_loss": true
+  },
+  "smoke": false,
+  "dataset_manifest": {
+    "selection_id": "585e0596d5",
+    "strategy": "isolated",
+    "budget": 240000,
+    "tokens_used": 240000,
+    "n_items": 197,
+    "n_sft": 985,
+    "n_pref": 197,
+    "seed": 0,
+    "include_context": false,
+    "sha1": "06f68dc58358"
+  }
+}

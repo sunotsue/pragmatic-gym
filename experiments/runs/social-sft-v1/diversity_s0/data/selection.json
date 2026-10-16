@@ -1,0 +1,469 @@
+{
+ "selection_id": "c81c7fb3f7",
+ "strategy": "diversity",
+ "budget": 240000,
+ "tokens_used": 239605,
+ "seed": 0,
+ "target_failure": null,
+ "include_context": true,
+ "n": 114,
+ "info": "Greedy farthest-point (k-center) selection over TF-IDF vectors of the observable conversation: maximises coverage of surface variety.",
+ "items": [
+  {
+   "id": "rel_like_what_we_have::dbabe9fb::v4",
+   "reason": "Seed point for farthest-point traversal."
+  },
+  {
+   "id": "inv_maybe_schedule::c28ed421::v1",
+   "reason": "Farthest-point pick: cosine distance 0.96 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::ff16e973::v5",
+   "reason": "Farthest-point pick: cosine distance 0.94 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::502fbce0::v2::ep158t3::t3",
+   "reason": "Farthest-point pick: cosine distance 0.85 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::6030bd54::v5",
+   "reason": "Farthest-point pick: cosine distance 0.83 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::9c4cf94e::v1::ep91t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.78 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::ada07d12::v4",
+   "reason": "Farthest-point pick: cosine distance 0.77 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::e779b42a::v5",
+   "reason": "Farthest-point pick: cosine distance 0.75 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::48d2a5a2::v2",
+   "reason": "Farthest-point pick: cosine distance 0.74 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::5819df43::v5",
+   "reason": "Farthest-point pick: cosine distance 0.74 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::2b19b673::v3",
+   "reason": "Farthest-point pick: cosine distance 0.72 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::bf79d949::v0::ep48t3::t3",
+   "reason": "Farthest-point pick: cosine distance 0.72 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::2cc6b42c::v4",
+   "reason": "Farthest-point pick: cosine distance 0.70 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::e63fdde6::v3",
+   "reason": "Farthest-point pick: cosine distance 0.68 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::9c161eb1::v0",
+   "reason": "Farthest-point pick: cosine distance 0.68 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::13590ae8::v0",
+   "reason": "Farthest-point pick: cosine distance 0.67 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::2437e2b4::v3",
+   "reason": "Farthest-point pick: cosine distance 0.67 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::e7aaec44::v3",
+   "reason": "Farthest-point pick: cosine distance 0.67 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::4a65df33::v2::ep233t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.65 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::25be5393::v2",
+   "reason": "Farthest-point pick: cosine distance 0.65 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::78854da4::v0",
+   "reason": "Farthest-point pick: cosine distance 0.64 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::32d82b5c::v2",
+   "reason": "Farthest-point pick: cosine distance 0.64 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::1d888d17::v2::ep50t3::t3",
+   "reason": "Farthest-point pick: cosine distance 0.63 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::ea0992c4::v4",
+   "reason": "Farthest-point pick: cosine distance 0.63 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::0d3eb03e::v0",
+   "reason": "Farthest-point pick: cosine distance 0.62 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::ed80fc57::v4",
+   "reason": "Farthest-point pick: cosine distance 0.62 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::66c57692::v3",
+   "reason": "Farthest-point pick: cosine distance 0.62 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::4647a412::v3",
+   "reason": "Farthest-point pick: cosine distance 0.61 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::1be05e02::v1",
+   "reason": "Farthest-point pick: cosine distance 0.60 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::2cd34b9c::v0::ep138t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.60 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::cdb959cc::v1::ep181t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.60 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::00dd5fd5::v2",
+   "reason": "Farthest-point pick: cosine distance 0.60 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::bd289a3b::v0",
+   "reason": "Farthest-point pick: cosine distance 0.59 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::e4420315::v4",
+   "reason": "Farthest-point pick: cosine distance 0.59 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::180cb053::v1::ep124t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.59 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::e6f79dfa::v2",
+   "reason": "Farthest-point pick: cosine distance 0.59 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::1fa62485::v1",
+   "reason": "Farthest-point pick: cosine distance 0.59 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::1a9ceee1::v1",
+   "reason": "Farthest-point pick: cosine distance 0.58 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::81a7c203::v5",
+   "reason": "Farthest-point pick: cosine distance 0.58 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::456ad068::v5",
+   "reason": "Farthest-point pick: cosine distance 0.58 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::d2e8d921::v0",
+   "reason": "Farthest-point pick: cosine distance 0.57 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::52df27b9::v2",
+   "reason": "Farthest-point pick: cosine distance 0.56 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::958a95da::v3",
+   "reason": "Farthest-point pick: cosine distance 0.56 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::c708c5a4::v0",
+   "reason": "Farthest-point pick: cosine distance 0.56 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::65f25e9d::v2::ep161t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.56 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::fb876c43::v3",
+   "reason": "Farthest-point pick: cosine distance 0.55 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::f856bdb4::v4",
+   "reason": "Farthest-point pick: cosine distance 0.55 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::124d4c89::v1",
+   "reason": "Farthest-point pick: cosine distance 0.55 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::998a7d40::v3",
+   "reason": "Farthest-point pick: cosine distance 0.55 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::f5a57c8b::v0::ep3t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::7b2c2e38::v1",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::198c202a::v5",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::56a8916b::v0",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::144ea626::v3",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::7b902b51::v5",
+   "reason": "Farthest-point pick: cosine distance 0.54 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::39b170d9::v2",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::2a70326e::v4",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::9c67b843::v4",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::fd04e885::v4",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::8626f578::v5",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::7a659e6e::v4",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::30ab28af::v0::ep255t3::t3",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::ef5136d9::v1::ep115t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::324a248d::v4",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::19137182::v1::ep64t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.53 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::206c9e41::v2",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::2cd34b9c::v2",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::11303d92::v1",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::655844c1::v0::ep21t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::9254cfa6::v5",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::ec75702d::v2",
+   "reason": "Farthest-point pick: cosine distance 0.52 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::5df19623::v1::ep25t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::88921273::v3",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::634b3a82::v2",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::6ef2cbc2::v0::ep54t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::dbb8a710::v4",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::59ed7111::v5",
+   "reason": "Farthest-point pick: cosine distance 0.51 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::4a207c06::v2::ep212t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::b4fa7411::v2",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::6d04a096::v0",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::7691c21a::v4",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::fe25b60f::v1",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::f309cf8b::v5",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::bd5e8199::v0::ep183t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::d91352f6::v5",
+   "reason": "Farthest-point pick: cosine distance 0.50 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::d3ec0ae7::v1",
+   "reason": "Farthest-point pick: cosine distance 0.49 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::da739407::v3",
+   "reason": "Farthest-point pick: cosine distance 0.49 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::8c617dce::v0",
+   "reason": "Farthest-point pick: cosine distance 0.49 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::bdbe08b4::v1::ep265t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.49 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::dad7a5d9::v2::ep89t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::b4859684::v2::ep227t3::t3",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::67943380::v1::ep229t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::a88963c1::v0",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::a32699db::v5",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::7d246ab7::v1::ep58t1::t1",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::bdd4e39d::v1",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::4d2fe45f::v2",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::8258f3b8::v0",
+   "reason": "Farthest-point pick: cosine distance 0.48 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::95eace71::v3",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::1a9617cc::v5",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::a2bdbddc::v3",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::3a1aa03a::v4",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::14b10a59::v1::ep226t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "emo_its_fine::810f4058::v2",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::cb104bc7::v5",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "rel_like_what_we_have::f32352a3::v3",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_maybe_schedule::7d7d3f2e::v2",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::259c0d47::v4",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::7ceb4069::v0",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::6df8b045::v1::ep178t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.47 from everything already selected."
+  },
+  {
+   "id": "inv_think_about_it::3f2e2e53::v2",
+   "reason": "Farthest-point pick: cosine distance 0.46 from everything already selected."
+  },
+  {
+   "id": "emo_no_worries::73ca2864::v1",
+   "reason": "Farthest-point pick: cosine distance 0.46 from everything already selected."
+  },
+  {
+   "id": "rel_happy_how_things_are::4ffc7559::v2",
+   "reason": "Farthest-point pick: cosine distance 0.46 from everything already selected."
+  },
+  {
+   "id": "inv_let_you_know::ac9fb1b5::v2::ep182t2::t2",
+   "reason": "Farthest-point pick: cosine distance 0.46 from everything already selected."
+  }
+ ]
+}

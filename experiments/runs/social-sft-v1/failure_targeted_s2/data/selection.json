@@ -1,0 +1,449 @@
+{
+ "selection_id": "769f6776a9",
+ "strategy": "failure_targeted",
+ "budget": 240000,
+ "tokens_used": 238560,
+ "seed": 2,
+ "target_failure": null,
+ "include_context": true,
+ "n": 109,
+ "info": "Highest base-model loss against the reference (cross-entropy + action regret), optionally focused on one diagnosed failure mode, at most two per contrast cluster.",
+ "items": [
+  {
+   "id": "emo_no_worries::1edbc985::v3",
+   "reason": "Base model loss 3.05 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "inv_think_about_it::49fa5f7b::v3",
+   "reason": "Base model loss 2.64 nats (regret 0.44); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::92290afd::v2",
+   "reason": "Base model loss 2.68 nats (regret 0.36); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::3f630df8::v0",
+   "reason": "Base model loss 2.84 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::3bb107b1::v2",
+   "reason": "Base model loss 2.63 nats (regret 0.38); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::2f0d47fe::v3",
+   "reason": "Base model loss 2.82 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_no_worries::94b05b33::v0",
+   "reason": "Base model loss 2.81 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_no_worries::334087e9::v3",
+   "reason": "Base model loss 2.73 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::9a043b5d::v2",
+   "reason": "Base model loss 2.52 nats (regret 0.31); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::3d384b14::v3",
+   "reason": "Base model loss 2.66 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::517827e1::v1",
+   "reason": "Base model loss 2.42 nats (regret 0.44); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::b7cc47b1::v0",
+   "reason": "Base model loss 2.64 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_no_worries::e3252f96::v1",
+   "reason": "Base model loss 2.63 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::e897f689::v1",
+   "reason": "Base model loss 2.41 nats (regret 0.45); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::01ab3893::v0",
+   "reason": "Base model loss 2.63 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_maybe_schedule::f80d9e64::v5",
+   "reason": "Base model loss 2.40 nats (regret 0.44); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_maybe_schedule::6c52102c::v5",
+   "reason": "Base model loss 2.40 nats (regret 0.44); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::5b21f52e::v0::ep171t1::t1",
+   "reason": "Base model loss 2.45 nats (regret 0.34); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::fe7f4832::v1",
+   "reason": "Base model loss 2.43 nats (regret 0.38); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::ba19b736::v1",
+   "reason": "Base model loss 2.62 nats (regret 0.00); failures: misread"
+  },
+  {
+   "id": "inv_think_about_it::2e1beeea::v0",
+   "reason": "Base model loss 2.47 nats (regret 0.29); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::f3fb0263::v1::ep34t1::t1",
+   "reason": "Base model loss 2.46 nats (regret 0.29); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::2681565d::v2",
+   "reason": "Base model loss 2.50 nats (regret 0.21); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::befeae1e::v3",
+   "reason": "Base model loss 2.60 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_no_worries::4e24e0c2::v0",
+   "reason": "Base model loss 2.60 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::bd557f70::v5",
+   "reason": "Base model loss 2.45 nats (regret 0.29); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::a7669f0a::v1",
+   "reason": "Base model loss 2.59 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_let_you_know::a1c780d1::v1::ep205t1::t1",
+   "reason": "Base model loss 2.41 nats (regret 0.34); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::54b5a7e3::v1",
+   "reason": "Base model loss 2.39 nats (regret 0.36); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::56a8916b::v0",
+   "reason": "Base model loss 2.46 nats (regret 0.22); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::6d90c87e::v2",
+   "reason": "Base model loss 2.43 nats (regret 0.26); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::9e1ef537::v4",
+   "reason": "Base model loss 2.33 nats (regret 0.45); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::f2272a50::v5",
+   "reason": "Base model loss 2.39 nats (regret 0.30); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_maybe_schedule::67a09f83::v0",
+   "reason": "Base model loss 2.33 nats (regret 0.43); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::76cbe181::v5",
+   "reason": "Base model loss 2.40 nats (regret 0.27); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::3e1fbbad::v5",
+   "reason": "Base model loss 2.52 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::6d04a096::v0",
+   "reason": "Base model loss 2.52 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::47037764::v4",
+   "reason": "Base model loss 2.41 nats (regret 0.20); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::b9232e0e::v3",
+   "reason": "Base model loss 2.28 nats (regret 0.45); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::d8c039ab::v0::ep6t1::t1",
+   "reason": "Base model loss 2.35 nats (regret 0.30); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::3d9270cc::v0",
+   "reason": "Base model loss 2.50 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_let_you_know::7e434e13::v2",
+   "reason": "Base model loss 2.42 nats (regret 0.17); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_maybe_schedule::6b2044a9::v0",
+   "reason": "Base model loss 2.27 nats (regret 0.42); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::b016bedd::v2",
+   "reason": "Base model loss 2.43 nats (regret 0.09); failures: misread"
+  },
+  {
+   "id": "inv_let_you_know::4a207c06::v2::ep212t2::t2",
+   "reason": "Base model loss 2.26 nats (regret 0.41); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::405b0fd1::v0",
+   "reason": "Base model loss 2.46 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_let_you_know::67943380::v1::ep229t1::t1",
+   "reason": "Base model loss 2.27 nats (regret 0.33); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::c910342b::v0",
+   "reason": "Base model loss 2.30 nats (regret 0.27); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::013572d7::v0",
+   "reason": "Base model loss 2.43 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::184457c7::v0",
+   "reason": "Base model loss 2.23 nats (regret 0.38); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::39790154::v2",
+   "reason": "Base model loss 2.31 nats (regret 0.23); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_maybe_schedule::205304dd::v1",
+   "reason": "Base model loss 2.29 nats (regret 0.25); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::7691c21a::v4",
+   "reason": "Base model loss 2.20 nats (regret 0.44); failures: literalism, misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::eaa588d6::v1",
+   "reason": "Base model loss 2.41 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "emo_its_fine::9eecfa63::v0",
+   "reason": "Base model loss 2.41 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_maybe_schedule::e129cdbd::v1",
+   "reason": "Base model loss 2.18 nats (regret 0.44); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::7241582d::v0",
+   "reason": "Base model loss 2.28 nats (regret 0.22); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::5b21f52e::v0::ep171t2::t2",
+   "reason": "Base model loss 2.22 nats (regret 0.31); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::56a8916b::v2",
+   "reason": "Base model loss 2.27 nats (regret 0.22); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::14821ea0::v3",
+   "reason": "Base model loss 2.38 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::56e626e0::v0",
+   "reason": "Base model loss 2.37 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::af1f91a4::v0",
+   "reason": "Base model loss 2.37 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::83ea5115::v2",
+   "reason": "Base model loss 2.22 nats (regret 0.29); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::ed7783c2::v5",
+   "reason": "Base model loss 2.36 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::47569da4::v2",
+   "reason": "Base model loss 2.32 nats (regret 0.07); failures: misread"
+  },
+  {
+   "id": "emo_no_worries::0b714826::v5",
+   "reason": "Base model loss 2.35 nats (regret 0.00); failures: misread"
+  },
+  {
+   "id": "inv_think_about_it::d98f4c12::v0",
+   "reason": "Base model loss 2.13 nats (regret 0.43); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::48d2a5a2::v2",
+   "reason": "Base model loss 2.23 nats (regret 0.24); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::67943380::v1::ep229t2::t2",
+   "reason": "Base model loss 2.18 nats (regret 0.33); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::74136c06::v2",
+   "reason": "Base model loss 2.33 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::0b638d1a::v4",
+   "reason": "Base model loss 2.21 nats (regret 0.24); failures: misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::8115c92e::v3",
+   "reason": "Base model loss 2.10 nats (regret 0.44); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_maybe_schedule::f69474ad::v1",
+   "reason": "Base model loss 2.20 nats (regret 0.24); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::0bb08f74::v1",
+   "reason": "Base model loss 2.31 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::bbf21120::v4",
+   "reason": "Base model loss 2.31 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::ae60e494::v0",
+   "reason": "Base model loss 2.31 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_its_fine::c44bbf52::v4",
+   "reason": "Base model loss 2.30 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "emo_its_fine::f17905a2::v0",
+   "reason": "Base model loss 2.30 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_maybe_schedule::b547db8e::v2",
+   "reason": "Base model loss 2.10 nats (regret 0.38); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::23cc4f11::v3",
+   "reason": "Base model loss 2.06 nats (regret 0.44); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::a4b931a9::v2",
+   "reason": "Base model loss 2.28 nats (regret 0.00); failures: misread"
+  },
+  {
+   "id": "emo_no_worries::c22f7f8b::v4",
+   "reason": "Base model loss 2.28 nats (regret 0.00); failures: misread"
+  },
+  {
+   "id": "inv_think_about_it::2c52a309::v0",
+   "reason": "Base model loss 2.18 nats (regret 0.18); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::224bd20c::v2::ep74t1::t1",
+   "reason": "Base model loss 2.23 nats (regret 0.09); failures: misread"
+  },
+  {
+   "id": "inv_think_about_it::0aa2ce49::v5",
+   "reason": "Base model loss 2.06 nats (regret 0.41); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::77697822::v5",
+   "reason": "Base model loss 2.27 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "emo_no_worries::581eebb8::v3",
+   "reason": "Base model loss 2.26 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "emo_its_fine::124d4c89::v1",
+   "reason": "Base model loss 2.25 nats (regret 0.00); failures: misread"
+  },
+  {
+   "id": "inv_maybe_schedule::b426725d::v2",
+   "reason": "Base model loss 2.07 nats (regret 0.36); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::b5ca13b6::v0",
+   "reason": "Base model loss 2.18 nats (regret 0.11); failures: misread"
+  },
+  {
+   "id": "inv_maybe_schedule::732758fc::v1",
+   "reason": "Base model loss 2.13 nats (regret 0.21); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::bf3ac03b::v4",
+   "reason": "Base model loss 2.23 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "inv_maybe_schedule::6882a9f5::v1",
+   "reason": "Base model loss 2.13 nats (regret 0.17); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::d2358ea8::v1::ep121t1::t1",
+   "reason": "Base model loss 2.09 nats (regret 0.26); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_let_you_know::10cf16bf::v0",
+   "reason": "Base model loss 2.16 nats (regret 0.11); failures: misread"
+  },
+  {
+   "id": "emo_no_worries::77e20671::v3",
+   "reason": "Base model loss 2.21 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "emo_no_worries::5fedc90f::v5",
+   "reason": "Base model loss 2.21 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "inv_think_about_it::81ee76b0::v0",
+   "reason": "Base model loss 2.14 nats (regret 0.13); failures: misread"
+  },
+  {
+   "id": "inv_let_you_know::63437b65::v2::ep104t1::t1",
+   "reason": "Base model loss 2.06 nats (regret 0.28); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::888b4a5f::v2",
+   "reason": "Base model loss 2.15 nats (regret 0.11); failures: misread"
+  },
+  {
+   "id": "emo_no_worries::7c314e87::v1",
+   "reason": "Base model loss 2.20 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_let_you_know::a1c780d1::v1::ep205t2::t2",
+   "reason": "Base model loss 2.10 nats (regret 0.20); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "inv_think_about_it::dc5e9b6f::v4",
+   "reason": "Base model loss 2.10 nats (regret 0.20); failures: misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::cf0b6420::v2",
+   "reason": "Base model loss 2.20 nats (regret 0.00); failures: literalism"
+  },
+  {
+   "id": "inv_let_you_know::a1c780d1::v1::ep205t3::t3",
+   "reason": "Base model loss 2.11 nats (regret 0.17); failures: literalism, misread, underconfident, suboptimal_action"
+  },
+  {
+   "id": "emo_its_fine::858e1926::v0",
+   "reason": "Base model loss 2.20 nats (regret 0.00); failures: literalism, misread"
+  },
+  {
+   "id": "inv_think_about_it::c11f7071::v0",
+   "reason": "Base model loss 2.14 nats (regret 0.11); failures: misread"
+  },
+  {
+   "id": "inv_maybe_schedule::ada696b0::v1",
+   "reason": "Base model loss 2.09 nats (regret 0.20); failures: misread, suboptimal_action"
+  },
+  {
+   "id": "emo_no_worries::49f4a221::v4",
+   "reason": "Base model loss 2.19 nats (regret 0.00); failures: literalism, misread"
+  }
+ ]
+}

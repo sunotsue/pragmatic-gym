@@ -1,0 +1,805 @@
+{
+ "selection_id": "235eb3491c",
+ "strategy": "isolated",
+ "budget": 240000,
+ "tokens_used": 239635,
+ "seed": 1,
+ "target_failure": null,
+ "include_context": false,
+ "n": 198,
+ "info": "Ablation: the random arm's experiences with relationship context and history removed (utterance only). Tests whether context-rich examples teach more than isolated ones at the same token budget.",
+ "items": [
+  {
+   "id": "inv_maybe_schedule::ed80fc57::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::72f441e6::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::e7060675::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::e23066ab::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::70c368bd::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::c493bdd0::v1::ep175t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::82c70088::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::b27aec8e::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::dbde5c1b::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::7e434e13::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::e0f2cc7d::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::5a397e66::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::cd42de63::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::502fbce0::v2::ep158t3::t3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::e4af1c85::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::78fa6b56::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::ca010ef2::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::70af3b1c::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::7141eb06::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::4e523260::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::29a3937f::v2::ep164t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::cf8e8ee2::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::96c32cdf::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::14b19e4c::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::abf6521e::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::bfeb5669::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::20a785e1::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::54026b6e::v2::ep137t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::cdb959cc::v1::ep181t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::a1da95f8::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::410bc413::v2::ep92t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::49fa5f7b::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::5a7b7431::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::d71b20fd::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::9f8a2aed::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::fe49e3f5::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::ed31be99::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::0d5d5a05::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::e0334001::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::ba19b736::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::8987fe01::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::3f630df8::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::b2967fab::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::795cf34e::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::1fa62485::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::d4aa0f2b::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::8c617dce::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::3f1d9bc0::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::1113a387::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::7172e162::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::2523f767::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::237202c9::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::f8dd00b3::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::dcae1408::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::8926518d::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::655844c1::v0::ep21t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::30caa4be::v0::ep156t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::ecd6cc92::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::4dd85c44::v2::ep17t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::dd1e49dd::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::145afcbd::v2::ep71t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::b541d040::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::558496a2::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::ef5136d9::v1::ep115t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::1469b0fa::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::48b00ea3::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::74136c06::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::405b0fd1::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::a2c15ea2::v2::ep236t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::11ce2762::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::6a3ff5a3::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::429c8521::v2::ep275t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::3ff4995c::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::7538a464::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::630c1074::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::739af62f::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::6b49a7d8::v1::ep223t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::ec8ae08f::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::6a1db6de::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::eaa588d6::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::58b6cc57::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::88e3a35e::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::619247cd::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::d2358ea8::v1::ep121t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::6b49a7d8::v1::ep223t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::722628b8::v0::ep36t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::9b6133c8::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::9e2a6031::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::5bc65e26::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::fb876c43::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::8bf773df::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::04dc7efc::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::78fa6b56::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::2cd34b9c::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::432cca7a::v1::ep292t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::937cb4ef::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::9e2a6031::v1::ep136t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::a9e508f1::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::ebf2f0d0::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::b5a6c5b5::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::541d9a3b::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::c9729a56::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::629091a7::v1::ep184t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::62b26b53::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::9d292e1c::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::5a7d9729::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::b547db8e::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::4a6a9e5b::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::73ae1408::v1::ep277t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::d99df054::v0::ep174t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::18917e9a::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::8c7a937d::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::090ffd09::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::414f5716::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::0364d43e::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::4dd85c44::v2::ep17t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::cbc8ed2f::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::6338ba59::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::d9d3dbf8::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::203a77b2::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::6b454bf9::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::2fb36385::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::beea1b3c::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::13975a47::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::2b567bbe::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::8a0fc55c::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::fa2fd7e6::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::cfacc177::v1::ep79t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::939390ce::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::8720343d::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::93995979::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::a5d668eb::v1::ep217t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::08072076::v1::ep214t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::925dc993::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::ee73b167::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::26deb136::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::be422a70::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::14821ea0::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::6a95f12f::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::51e42c30::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::57650261::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::d8560244::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::469f6415::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::c4dbc7c9::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::6b49a7d8::v1::ep223t3::t3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::5decc06a::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::970bfaa5::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::58f0a92c::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::7d23f337::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::3bb107b1::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::25b2cf70::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::88114efe::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::708c7e45::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::7d246ab7::v1::ep58t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::20c9bac2::v2::ep134t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::216313db::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::4431aea3::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::6a59e922::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::2c47d792::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::ca2daff1::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::ed66864a::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::bacc9b5f::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::245c59b5::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::d5abe265::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::54a69830::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::66c57692::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::77e20671::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_like_what_we_have::e856628a::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::655844c1::v0::ep21t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::262223d6::v2::ep206t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::47037764::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::9c4cf94e::v1::ep91t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::5d81f96b::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::fce2776f::v2::ep23t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::9cfb1b5c::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::ea928b05::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::d3f397b1::v2::ep167t2::t2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::8f568fbb::v0::ep270t3::t3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::87aaf694::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::475fe148::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::bf4297c4::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::7453f142::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::607075be::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_think_about_it::e897f689::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::6c52102c::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::4dc8b93f::v2::ep254t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::2fdfac21::v5",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::16dc1eed::v1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::22ff2b9e::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::c725b753::v1::ep100t1::t1",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_let_you_know::92e3b970::v2",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::ae885704::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "inv_maybe_schedule::ba197151::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::c32a2680::v0",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::b0724714::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_no_worries::d3d2b4b8::v3",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "emo_its_fine::0af44302::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  },
+  {
+   "id": "rel_happy_how_things_are::29cc3ba6::v4",
+   "reason": "Uniformly sampled; context and history stripped (ablation)."
+  }
+ ]
+}

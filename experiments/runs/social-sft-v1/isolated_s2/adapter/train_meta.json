@@ -1,0 +1,147 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "seed": 2,
+  "n_examples": 980,
+  "train_tokens": 213748,
+  "epochs": 1,
+  "steps": 123,
+  "train_loss": 0.4957494057290922,
+  "loss_curve": [
+    {
+      "step": 5,
+      "loss": 0.619670295715332
+    },
+    {
+      "step": 10,
+      "loss": 0.5970736503601074
+    },
+    {
+      "step": 15,
+      "loss": 0.5100618839263916
+    },
+    {
+      "step": 20,
+      "loss": 0.5237180709838867
+    },
+    {
+      "step": 25,
+      "loss": 0.49507699012756345
+    },
+    {
+      "step": 30,
+      "loss": 0.4174477577209473
+    },
+    {
+      "step": 35,
+      "loss": 0.45230765342712403
+    },
+    {
+      "step": 40,
+      "loss": 0.6628135204315185
+    },
+    {
+      "step": 45,
+      "loss": 0.5001617431640625
+    },
+    {
+      "step": 50,
+      "loss": 0.5237339496612549
+    },
+    {
+      "step": 55,
+      "loss": 0.5346149444580078
+    },
+    {
+      "step": 60,
+      "loss": 0.5056349754333496
+    },
+    {
+      "step": 65,
+      "loss": 0.4760920524597168
+    },
+    {
+      "step": 70,
+      "loss": 0.4516876220703125
+    },
+    {
+      "step": 75,
+      "loss": 0.4418942451477051
+    },
+    {
+      "step": 80,
+      "loss": 0.4772545337677002
+    },
+    {
+      "step": 85,
+      "loss": 0.49669747352600097
+    },
+    {
+      "step": 90,
+      "loss": 0.48452167510986327
+    },
+    {
+      "step": 95,
+      "loss": 0.4693758964538574
+    },
+    {
+      "step": 100,
+      "loss": 0.4175680637359619
+    },
+    {
+      "step": 105,
+      "loss": 0.5030381202697753
+    },
+    {
+      "step": 110,
+      "loss": 0.4632530212402344
+    },
+    {
+      "step": 115,
+      "loss": 0.44996490478515627
+    },
+    {
+      "step": 120,
+      "loss": 0.466143274307251
+    }
+  ],
+  "runtime_s": 329.9,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "trl_torch_logprob_shim": false,
+  "train_config": {
+    "epochs": 1,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "per_device_batch_size": 8,
+    "grad_accum": 1,
+    "max_length": 1024,
+    "weight_decay": 0.0,
+    "completion_only_loss": true
+  },
+  "smoke": false,
+  "dataset_manifest": {
+    "selection_id": "b1173af66f",
+    "strategy": "isolated",
+    "budget": 240000,
+    "tokens_used": 239090,
+    "n_items": 196,
+    "n_sft": 980,
+    "n_pref": 196,
+    "seed": 2,
+    "include_context": false,
+    "sha1": "62bdce5a0747"
+  }
+}

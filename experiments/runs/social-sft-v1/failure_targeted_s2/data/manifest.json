@@ -1,0 +1,12 @@
+{
+  "selection_id": "769f6776a9",
+  "strategy": "failure_targeted",
+  "budget": 240000,
+  "tokens_used": 238560,
+  "n_items": 109,
+  "n_sft": 545,
+  "n_pref": 109,
+  "seed": 2,
+  "include_context": true,
+  "sha1": "eaf0736d1c42"
+}

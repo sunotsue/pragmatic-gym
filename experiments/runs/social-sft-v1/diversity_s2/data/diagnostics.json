@@ -1,0 +1,168 @@
+{
+ "n": 114,
+ "tokens": 239925,
+ "leakage": {
+  "n_leaks": 0,
+  "examples": [],
+  "checked_patterns": [
+   "true_intent",
+   "private_state",
+   "lssm",
+   "patience",
+   "hidden",
+   "force_intent",
+   "reference_distribution",
+   "<snake_case intent, factor and level ids>"
+  ]
+ },
+ "duplicates": {
+  "exact": 0,
+  "near_jaccard_0.9": 0
+ },
+ "distribution": {
+  "target_interpretation": {
+   "follow_through": 14,
+   "genuinely_fine": 11,
+   "prefers_status_quo": 3,
+   "soft_decline": 37,
+   "undecided": 24,
+   "hurt_face_saving": 4,
+   "avoiding_talk": 4,
+   "frustrated_pattern": 4,
+   "disappointed_understanding": 5,
+   "content_open": 8
+  },
+  "target_action": {
+   "clarify_low_pressure": 30,
+   "acknowledge_and_repair": 24,
+   "clarify_gently": 7,
+   "graceful_exit": 31,
+   "acknowledge_wait": 14,
+   "share_own_view": 8
+  },
+  "domain": {
+   "invitation": 75,
+   "emotional": 24,
+   "relationship": 15
+  },
+  "family": {
+   "inv_let_you_know": 38,
+   "emo_no_worries": 12,
+   "rel_happy_how_things_are": 7,
+   "inv_think_about_it": 18,
+   "inv_maybe_schedule": 19,
+   "emo_its_fine": 12,
+   "rel_like_what_we_have": 8
+  },
+  "capability": {
+   "indirect_speech": 75,
+   "emotional_repair": 24,
+   "history_dependent": 15
+  },
+  "source": {
+   "template": 94,
+   "rollout": 20
+  }
+ },
+ "overlap": {
+  "eval_id": {
+   "family_overlap": [
+    "emo_its_fine",
+    "emo_no_worries",
+    "inv_let_you_know",
+    "inv_maybe_schedule",
+    "inv_think_about_it",
+    "rel_happy_how_things_are",
+    "rel_like_what_we_have"
+   ],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": true
+  },
+  "eval_ood_family": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_ood_domain": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  },
+  "eval_handwritten": {
+   "family_overlap": [],
+   "cell_overlap": 0,
+   "near_duplicate_items": 0,
+   "expected_family_overlap": false
+  }
+ },
+ "factor_coverage": {
+  "relationship": {
+   "romantic_interest": 23,
+   "close_friend": 42,
+   "family_member": 24,
+   "acquaintance": 10
+  },
+  "familiarity": {
+   "established": 84,
+   "stranger": 10,
+   "acquaintance": 20
+  },
+  "shared_history": {
+   "established_trust": 22,
+   "unspecified": 52,
+   "repeated_disappointment": 20,
+   "prior_conflict": 15,
+   "first_interaction": 5
+  },
+  "stakes": {
+   "medium": 72,
+   "low": 25,
+   "high": 17
+  },
+  "comm_style": {
+   "indirect": 20,
+   "avoidant": 20,
+   "unspecified": 47,
+   "direct": 27
+  },
+  "prior_pattern": {
+   "once": 21,
+   "none": 75,
+   "repeated": 18
+  },
+  "audience": {
+   "private": 65,
+   "group_chat": 29,
+   "public": 20
+  },
+  "norms": {
+   "unspecified": 74,
+   "indirect_norm": 21,
+   "literal_norm": 19
+  },
+  "info_asymmetry": {
+   "symmetric": 85,
+   "asymmetric": 29
+  },
+  "commitment": {
+   "undefined": 61,
+   "explicit": 25,
+   "casual": 28
+  },
+  "directness": {
+   "indirect": 97,
+   "explicit": 17
+  },
+  "social_pressure": {
+   "medium": 21,
+   "high": 21,
+   "low": 48
+  }
+ },
+ "warnings": [
+  "domain imbalance: 'invitation' is 66% of examples"
+ ]
+}

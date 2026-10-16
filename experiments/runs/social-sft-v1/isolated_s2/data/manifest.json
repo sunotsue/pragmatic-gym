@@ -1,0 +1,12 @@
+{
+  "selection_id": "b1173af66f",
+  "strategy": "isolated",
+  "budget": 240000,
+  "tokens_used": 239090,
+  "n_items": 196,
+  "n_sft": 980,
+  "n_pref": 196,
+  "seed": 2,
+  "include_context": false,
+  "sha1": "62bdce5a0747"
+}

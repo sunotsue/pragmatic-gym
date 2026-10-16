@@ -1,0 +1,469 @@
+{
+ "selection_id": "f6b3505348",
+ "strategy": "counterfactual_contrast",
+ "budget": 240000,
+ "tokens_used": 236185,
+ "seed": 1,
+ "target_failure": null,
+ "include_context": true,
+ "n": 114,
+ "info": "Selects whole contrast clusters \u2014 the same conversation with one social factor changed \u2014 ranked by how far that single change moves the reference interpretation.",
+ "items": [
+  {
+   "id": "inv_think_about_it::aba06f8f::v3",
+   "reason": "Contrast cluster inv_think_about_it:c37 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.64; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_think_about_it::958a95da::v3",
+   "reason": "Contrast cluster inv_think_about_it:c37 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.64; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_think_about_it::3dbb5e30::v3",
+   "reason": "Contrast cluster inv_think_about_it:c37 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.64; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_think_about_it::c6c687ac::v4",
+   "reason": "Contrast cluster inv_think_about_it:c68 [anchor]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.64."
+  },
+  {
+   "id": "inv_think_about_it::5cd09802::v4",
+   "reason": "Contrast cluster inv_think_about_it:c68 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.64."
+  },
+  {
+   "id": "inv_think_about_it::7453f142::v4",
+   "reason": "Contrast cluster inv_think_about_it:c68 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.64."
+  },
+  {
+   "id": "inv_maybe_schedule::385148c9::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c2 [anchor]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.01; norms \u2192 \u0394TVD 0.62."
+  },
+  {
+   "id": "inv_maybe_schedule::e3c2f90a::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c2 [one-factor counterfactual (familiarity)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.01; norms \u2192 \u0394TVD 0.62."
+  },
+  {
+   "id": "inv_maybe_schedule::21a63320::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c2 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.01; norms \u2192 \u0394TVD 0.62."
+  },
+  {
+   "id": "inv_let_you_know::beea1b3c::v1",
+   "reason": "Contrast cluster inv_let_you_know:c62 [anchor]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.05; norms \u2192 \u0394TVD 0.61."
+  },
+  {
+   "id": "inv_let_you_know::8c1c7a15::v1",
+   "reason": "Contrast cluster inv_let_you_know:c62 [one-factor counterfactual (stakes)]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.05; norms \u2192 \u0394TVD 0.61."
+  },
+  {
+   "id": "inv_let_you_know::05320f00::v1",
+   "reason": "Contrast cluster inv_let_you_know:c62 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.05; norms \u2192 \u0394TVD 0.61."
+  },
+  {
+   "id": "inv_maybe_schedule::eb9294a7::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c42 [anchor]. Changing a single factor moves the reference: social_pressure \u2192 \u0394TVD 0.11; norms \u2192 \u0394TVD 0.58."
+  },
+  {
+   "id": "inv_maybe_schedule::f37bed72::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c42 [one-factor counterfactual (social_pressure)]. Changing a single factor moves the reference: social_pressure \u2192 \u0394TVD 0.11; norms \u2192 \u0394TVD 0.58."
+  },
+  {
+   "id": "inv_maybe_schedule::bdd4e39d::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c42 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: social_pressure \u2192 \u0394TVD 0.11; norms \u2192 \u0394TVD 0.58."
+  },
+  {
+   "id": "inv_maybe_schedule::a9f2a6ad::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c23 [anchor]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.55."
+  },
+  {
+   "id": "inv_maybe_schedule::336a7245::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c23 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.55."
+  },
+  {
+   "id": "inv_maybe_schedule::fd6c0e05::v0",
+   "reason": "Contrast cluster inv_maybe_schedule:c23 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.55."
+  },
+  {
+   "id": "inv_think_about_it::d82723b0::v3",
+   "reason": "Contrast cluster inv_think_about_it:c57 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.54; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_think_about_it::96c32cdf::v3",
+   "reason": "Contrast cluster inv_think_about_it:c57 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.54; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_think_about_it::e3047cde::v3",
+   "reason": "Contrast cluster inv_think_about_it:c57 [one-factor counterfactual (social_pressure)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.54; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "emo_its_fine::d0d8e589::v1",
+   "reason": "Contrast cluster emo_its_fine:c33 [anchor]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.10; prior_pattern \u2192 \u0394TVD 0.48."
+  },
+  {
+   "id": "emo_its_fine::87aaf694::v1",
+   "reason": "Contrast cluster emo_its_fine:c33 [one-factor counterfactual (familiarity)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.10; prior_pattern \u2192 \u0394TVD 0.48."
+  },
+  {
+   "id": "emo_its_fine::c54abf18::v1",
+   "reason": "Contrast cluster emo_its_fine:c33 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.10; prior_pattern \u2192 \u0394TVD 0.48."
+  },
+  {
+   "id": "rel_happy_how_things_are::4ffc7559::v2",
+   "reason": "Contrast cluster rel_happy_how_things_are:c69 [anchor]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.41; shared_history \u2192 \u0394TVD 0.08."
+  },
+  {
+   "id": "rel_happy_how_things_are::256649e3::v2",
+   "reason": "Contrast cluster rel_happy_how_things_are:c69 [one-factor counterfactual (comm_style)]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.41; shared_history \u2192 \u0394TVD 0.08."
+  },
+  {
+   "id": "rel_happy_how_things_are::99399e14::v2",
+   "reason": "Contrast cluster rel_happy_how_things_are:c69 [one-factor counterfactual (shared_history)]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.41; shared_history \u2192 \u0394TVD 0.08."
+  },
+  {
+   "id": "inv_maybe_schedule::dd0cf20f::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c54 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_maybe_schedule::6882a9f5::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c54 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_maybe_schedule::75696f66::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c54 [one-factor counterfactual (social_pressure)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; social_pressure \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_let_you_know::30ab28af::v3",
+   "reason": "Contrast cluster inv_let_you_know:c51 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; audience \u2192 \u0394TVD 0.06."
+  },
+  {
+   "id": "inv_let_you_know::aa97076e::v3",
+   "reason": "Contrast cluster inv_let_you_know:c51 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; audience \u2192 \u0394TVD 0.06."
+  },
+  {
+   "id": "inv_let_you_know::a26dd034::v3",
+   "reason": "Contrast cluster inv_let_you_know:c51 [one-factor counterfactual (audience)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.41; audience \u2192 \u0394TVD 0.06."
+  },
+  {
+   "id": "inv_maybe_schedule::7b902b51::v5",
+   "reason": "Contrast cluster inv_maybe_schedule:c58 [anchor]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.41; relationship \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "inv_maybe_schedule::7d644941::v5",
+   "reason": "Contrast cluster inv_maybe_schedule:c58 [one-factor counterfactual (shared_history)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.41; relationship \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "inv_maybe_schedule::6955122b::v5",
+   "reason": "Contrast cluster inv_maybe_schedule:c58 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.41; relationship \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "inv_think_about_it::81ee76b0::v0",
+   "reason": "Contrast cluster inv_think_about_it:c60 [anchor]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "inv_think_about_it::ecd6cc92::v0",
+   "reason": "Contrast cluster inv_think_about_it:c60 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "inv_think_about_it::d8560244::v0",
+   "reason": "Contrast cluster inv_think_about_it:c60 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; norms \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "emo_its_fine::f524add7::v0",
+   "reason": "Contrast cluster emo_its_fine:c20 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.40; commitment \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "emo_its_fine::e09f88e4::v0",
+   "reason": "Contrast cluster emo_its_fine:c20 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.40; commitment \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "emo_its_fine::ae60e494::v0",
+   "reason": "Contrast cluster emo_its_fine:c20 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.40; commitment \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "inv_maybe_schedule::77c99595::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c11 [anchor]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.12; prior_pattern \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "inv_maybe_schedule::30d3ebeb::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c11 [one-factor counterfactual (comm_style)]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.12; prior_pattern \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "inv_maybe_schedule::943e7bb6::v1",
+   "reason": "Contrast cluster inv_maybe_schedule:c11 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: comm_style \u2192 \u0394TVD 0.12; prior_pattern \u2192 \u0394TVD 0.40."
+  },
+  {
+   "id": "inv_let_you_know::6bc52e0c::v1",
+   "reason": "Contrast cluster inv_let_you_know:c67 [anchor]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.07; norms \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "inv_let_you_know::88d3ff8c::v1",
+   "reason": "Contrast cluster inv_let_you_know:c67 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.07; norms \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "inv_let_you_know::eb5c9e57::v1",
+   "reason": "Contrast cluster inv_let_you_know:c67 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.07; norms \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "inv_maybe_schedule::5a7bfabb::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c59 [anchor]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "inv_maybe_schedule::b282e45b::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c59 [one-factor counterfactual (familiarity)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "inv_maybe_schedule::dfdfe804::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c59 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: familiarity \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.39."
+  },
+  {
+   "id": "rel_like_what_we_have::8b34d43e::v4",
+   "reason": "Contrast cluster rel_like_what_we_have:c0 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.38; familiarity \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "rel_like_what_we_have::5206ca9e::v4",
+   "reason": "Contrast cluster rel_like_what_we_have:c0 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.38; familiarity \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "rel_like_what_we_have::5ae304f0::v4",
+   "reason": "Contrast cluster rel_like_what_we_have:c0 [one-factor counterfactual (familiarity)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.38; familiarity \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_let_you_know::b31d72ee::v1",
+   "reason": "Contrast cluster inv_let_you_know:c40 [anchor]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.38; comm_style \u2192 \u0394TVD 0.13."
+  },
+  {
+   "id": "inv_let_you_know::398eb9b1::v1",
+   "reason": "Contrast cluster inv_let_you_know:c40 [one-factor counterfactual (shared_history)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.38; comm_style \u2192 \u0394TVD 0.13."
+  },
+  {
+   "id": "inv_let_you_know::642b2889::v1",
+   "reason": "Contrast cluster inv_let_you_know:c40 [one-factor counterfactual (comm_style)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.38; comm_style \u2192 \u0394TVD 0.13."
+  },
+  {
+   "id": "rel_happy_how_things_are::9704833e::v5",
+   "reason": "Contrast cluster rel_happy_how_things_are:c37 [anchor]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.38."
+  },
+  {
+   "id": "rel_happy_how_things_are::7493a29b::v5",
+   "reason": "Contrast cluster rel_happy_how_things_are:c37 [one-factor counterfactual (info_asymmetry)]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.38."
+  },
+  {
+   "id": "rel_happy_how_things_are::1c330ab8::v5",
+   "reason": "Contrast cluster rel_happy_how_things_are:c37 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.05; prior_pattern \u2192 \u0394TVD 0.38."
+  },
+  {
+   "id": "inv_think_about_it::8c7a937d::v4",
+   "reason": "Contrast cluster inv_think_about_it:c29 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_think_about_it::96ed81cd::v4",
+   "reason": "Contrast cluster inv_think_about_it:c29 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_think_about_it::0b78a620::v4",
+   "reason": "Contrast cluster inv_think_about_it:c29 [one-factor counterfactual (info_asymmetry)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_let_you_know::77c99595::v5",
+   "reason": "Contrast cluster inv_let_you_know:c14 [anchor]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.37; norms \u2192 \u0394TVD 0.34."
+  },
+  {
+   "id": "inv_let_you_know::951187ed::v5",
+   "reason": "Contrast cluster inv_let_you_know:c14 [one-factor counterfactual (shared_history)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.37; norms \u2192 \u0394TVD 0.34."
+  },
+  {
+   "id": "inv_let_you_know::090f8fb6::v5",
+   "reason": "Contrast cluster inv_let_you_know:c14 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.37; norms \u2192 \u0394TVD 0.34."
+  },
+  {
+   "id": "emo_no_worries::b4fa7411::v2",
+   "reason": "Contrast cluster emo_no_worries:c43 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; commitment \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "emo_no_worries::66f89bda::v2",
+   "reason": "Contrast cluster emo_no_worries:c43 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; commitment \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "emo_no_worries::d47a1dec::v2",
+   "reason": "Contrast cluster emo_no_worries:c43 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; commitment \u2192 \u0394TVD 0.03."
+  },
+  {
+   "id": "emo_no_worries::53bb6bf6::v1",
+   "reason": "Contrast cluster emo_no_worries:c5 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.09."
+  },
+  {
+   "id": "emo_no_worries::e3252f96::v1",
+   "reason": "Contrast cluster emo_no_worries:c5 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.09."
+  },
+  {
+   "id": "emo_no_worries::ba19b736::v1",
+   "reason": "Contrast cluster emo_no_worries:c5 [one-factor counterfactual (info_asymmetry)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.37; info_asymmetry \u2192 \u0394TVD 0.09."
+  },
+  {
+   "id": "emo_its_fine::50db452a::v1",
+   "reason": "Contrast cluster emo_its_fine:c9 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.12."
+  },
+  {
+   "id": "emo_its_fine::c6389c5b::v1",
+   "reason": "Contrast cluster emo_its_fine:c9 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.12."
+  },
+  {
+   "id": "emo_its_fine::4b46caf7::v1",
+   "reason": "Contrast cluster emo_its_fine:c9 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.12."
+  },
+  {
+   "id": "rel_like_what_we_have::c0c9fb14::v1",
+   "reason": "Contrast cluster rel_like_what_we_have:c10 [anchor]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.01; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "rel_like_what_we_have::5fe1b9cc::v1",
+   "reason": "Contrast cluster rel_like_what_we_have:c10 [one-factor counterfactual (stakes)]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.01; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "rel_like_what_we_have::3ed22839::v1",
+   "reason": "Contrast cluster rel_like_what_we_have:c10 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: stakes \u2192 \u0394TVD 0.01; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "emo_no_worries::5e2f6d9f::v2",
+   "reason": "Contrast cluster emo_no_worries:c27 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; stakes \u2192 \u0394TVD 0.26."
+  },
+  {
+   "id": "emo_no_worries::0a2775c7::v2",
+   "reason": "Contrast cluster emo_no_worries:c27 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; stakes \u2192 \u0394TVD 0.26."
+  },
+  {
+   "id": "emo_no_worries::4dcdbff2::v2",
+   "reason": "Contrast cluster emo_no_worries:c27 [one-factor counterfactual (stakes)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; stakes \u2192 \u0394TVD 0.26."
+  },
+  {
+   "id": "inv_think_about_it::01879f7e::v4",
+   "reason": "Contrast cluster inv_think_about_it:c65 [anchor]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.09; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_think_about_it::2523f767::v4",
+   "reason": "Contrast cluster inv_think_about_it:c65 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.09; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_think_about_it::482a143a::v4",
+   "reason": "Contrast cluster inv_think_about_it:c65 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: commitment \u2192 \u0394TVD 0.09; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "emo_no_worries::c32a2680::v0",
+   "reason": "Contrast cluster emo_no_worries:c26 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "emo_no_worries::94b05b33::v0",
+   "reason": "Contrast cluster emo_no_worries:c26 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "emo_no_worries::27e9c739::v0",
+   "reason": "Contrast cluster emo_no_worries:c26 [one-factor counterfactual (commitment)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; commitment \u2192 \u0394TVD 0.04."
+  },
+  {
+   "id": "inv_maybe_schedule::6afd18ad::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c38 [anchor]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; norms \u2192 \u0394TVD 0.29."
+  },
+  {
+   "id": "inv_maybe_schedule::a6f47d35::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c38 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; norms \u2192 \u0394TVD 0.29."
+  },
+  {
+   "id": "inv_maybe_schedule::2be88f40::v3",
+   "reason": "Contrast cluster inv_maybe_schedule:c38 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: prior_pattern \u2192 \u0394TVD 0.36; norms \u2192 \u0394TVD 0.29."
+  },
+  {
+   "id": "inv_think_about_it::88824d62::v2",
+   "reason": "Contrast cluster inv_think_about_it:c27 [anchor]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_think_about_it::203a77b2::v2",
+   "reason": "Contrast cluster inv_think_about_it:c27 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_think_about_it::9a043b5d::v2",
+   "reason": "Contrast cluster inv_think_about_it:c27 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: relationship \u2192 \u0394TVD 0.04; prior_pattern \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_maybe_schedule::dbb8a710::v4",
+   "reason": "Contrast cluster inv_maybe_schedule:c25 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_maybe_schedule::6ca635ee::v4",
+   "reason": "Contrast cluster inv_maybe_schedule:c25 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_maybe_schedule::9191d94d::v4",
+   "reason": "Contrast cluster inv_maybe_schedule:c25 [one-factor counterfactual (info_asymmetry)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; info_asymmetry \u2192 \u0394TVD 0.07."
+  },
+  {
+   "id": "inv_think_about_it::f0cddf34::v4",
+   "reason": "Contrast cluster inv_think_about_it:c25 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; relationship \u2192 \u0394TVD 0.05."
+  },
+  {
+   "id": "inv_think_about_it::c8dca665::v4",
+   "reason": "Contrast cluster inv_think_about_it:c25 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; relationship \u2192 \u0394TVD 0.05."
+  },
+  {
+   "id": "inv_think_about_it::a5c6abf3::v4",
+   "reason": "Contrast cluster inv_think_about_it:c25 [one-factor counterfactual (relationship)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; relationship \u2192 \u0394TVD 0.05."
+  },
+  {
+   "id": "inv_think_about_it::cb4a8295::v1",
+   "reason": "Contrast cluster inv_think_about_it:c48 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; comm_style \u2192 \u0394TVD 0.35."
+  },
+  {
+   "id": "inv_think_about_it::72922fd1::v1",
+   "reason": "Contrast cluster inv_think_about_it:c48 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; comm_style \u2192 \u0394TVD 0.35."
+  },
+  {
+   "id": "inv_think_about_it::cbc8ed2f::v1",
+   "reason": "Contrast cluster inv_think_about_it:c48 [one-factor counterfactual (comm_style)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; comm_style \u2192 \u0394TVD 0.35."
+  },
+  {
+   "id": "inv_let_you_know::54026b6e::v0",
+   "reason": "Contrast cluster inv_let_you_know:c30 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; prior_pattern \u2192 \u0394TVD 0.23."
+  },
+  {
+   "id": "inv_let_you_know::6f2b4724::v0",
+   "reason": "Contrast cluster inv_let_you_know:c30 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; prior_pattern \u2192 \u0394TVD 0.23."
+  },
+  {
+   "id": "inv_let_you_know::7f821b91::v0",
+   "reason": "Contrast cluster inv_let_you_know:c30 [one-factor counterfactual (prior_pattern)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; prior_pattern \u2192 \u0394TVD 0.23."
+  },
+  {
+   "id": "inv_let_you_know::f5a8837c::v5",
+   "reason": "Contrast cluster inv_let_you_know:c22 [anchor]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.08; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_let_you_know::2fdfac21::v5",
+   "reason": "Contrast cluster inv_let_you_know:c22 [one-factor counterfactual (info_asymmetry)]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.08; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_let_you_know::f37bed72::v5",
+   "reason": "Contrast cluster inv_let_you_know:c22 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: info_asymmetry \u2192 \u0394TVD 0.08; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "inv_let_you_know::1a0b46dc::v0",
+   "reason": "Contrast cluster inv_let_you_know:c43 [anchor]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; audience \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "inv_let_you_know::98d86678::v0",
+   "reason": "Contrast cluster inv_let_you_know:c43 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; audience \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "inv_let_you_know::08d3c227::v0",
+   "reason": "Contrast cluster inv_let_you_know:c43 [one-factor counterfactual (audience)]. Changing a single factor moves the reference: norms \u2192 \u0394TVD 0.36; audience \u2192 \u0394TVD 0.11."
+  },
+  {
+   "id": "emo_its_fine::409e459b::v2",
+   "reason": "Contrast cluster emo_its_fine:c29 [anchor]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.34; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "emo_its_fine::2c815173::v2",
+   "reason": "Contrast cluster emo_its_fine:c29 [one-factor counterfactual (shared_history)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.34; norms \u2192 \u0394TVD 0.36."
+  },
+  {
+   "id": "emo_its_fine::0267abe2::v2",
+   "reason": "Contrast cluster emo_its_fine:c29 [one-factor counterfactual (norms)]. Changing a single factor moves the reference: shared_history \u2192 \u0394TVD 0.34; norms \u2192 \u0394TVD 0.36."
+  }
+ ]
+}

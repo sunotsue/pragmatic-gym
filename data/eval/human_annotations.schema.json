@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pragmatic Gym human interpretation distribution (one row per family x cell)",
+  "description": "Aggregated from N independent annotators who saw ONLY the observable conversation (exported by scripts/export_annotation_batch.py). Each annotator distributes 100 points across the interpretations; rows store the mean distribution. Read by causal/analysis.py (human-model divergence) and usable as a drop-in replacement for LSSM references.",
+  "type": "object",
+  "required": ["family_id", "cell", "distribution", "n"],
+  "properties": {
+    "family_id": {"type": "string"},
+    "cell": {"type": "string", "description": "generator.cell_key(levels)"},
+    "distribution": {"type": "object", "additionalProperties": {"type": "number"}},
+    "n": {"type": "integer", "minimum": 1},
+    "inter_annotator": {"type": "object", "description": "e.g. mean pairwise JSD, Krippendorff alpha on argmax", "additionalProperties": {"type": "number"}},
+    "population": {"type": "string", "description": "who annotated (recruitment, consent, stated communication norms) — never a proxy for nationality/identity"},
+    "consent": {"type": "string"}
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "seed": 0,
+  "n_examples": 600,
+  "train_tokens": 209803,
+  "epochs": 1,
+  "steps": 75,
+  "train_loss": 0.5178468577067057,
+  "loss_curve": [
+    {
+      "step": 5,
+      "loss": 0.7159908771514892
+    },
+    {
+      "step": 10,
+      "loss": 0.5323532104492188
+    },
+    {
+      "step": 15,
+      "loss": 0.5368408679962158
+    },
+    {
+      "step": 20,
+      "loss": 0.5173571109771729
+    },
+    {
+      "step": 25,
+      "loss": 0.5192166805267334
+    },
+    {
+      "step": 30,
+      "loss": 0.5101378917694092
+    },
+    {
+      "step": 35,
+      "loss": 0.498561954498291
+    },
+    {
+      "step": 40,
+      "loss": 0.498895263671875
+    },
+    {
+      "step": 45,
+      "loss": 0.5144329071044922
+    },
+    {
+      "step": 50,
+      "loss": 0.505052900314331
+    },
+    {
+      "step": 55,
+      "loss": 0.4896981239318848
+    },
+    {
+      "step": 60,
+      "loss": 0.49275598526000974
+    },
+    {
+      "step": 65,
+      "loss": 0.47530317306518555
+    },
+    {
+      "step": 70,
+      "loss": 0.4844539642333984
+    },
+    {
+      "step": 75,
+      "loss": 0.4766519546508789
+    }
+  ],
+  "runtime_s": 257.9,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "trl_torch_logprob_shim": true,
+  "train_config": {
+    "epochs": 1,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "per_device_batch_size": 8,
+    "grad_accum": 1,
+    "max_length": 1024,
+    "weight_decay": 0.0,
+    "completion_only_loss": true
+  },
+  "smoke": false,
+  "dataset_manifest": {
+    "selection_id": "9aee3149cc",
+    "strategy": "random",
+    "budget": 240000,
+    "tokens_used": 239595,
+    "n_items": 120,
+    "n_sft": 600,
+    "n_pref": 120,
+    "seed": 0,
+    "include_context": true,
+    "sha1": "61e2bd0a2d2e"
+  }
+}

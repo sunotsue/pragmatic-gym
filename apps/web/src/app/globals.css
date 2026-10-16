@@ -1,0 +1,135 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* ---------------------------------------------------------------------------
+   Pragmatic Gym design tokens (see DESIGN_SYSTEM.md). One ink, one hot accent, square corners, tight
+   grotesk type, dots as the data language.
+--------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+
+  --color-ink: var(--pg-ink);
+  --color-ink-2: var(--pg-ink-2);
+  --color-ink-3: var(--pg-ink-3);
+  --color-line: var(--pg-line);
+  --color-wash: var(--pg-wash);
+  --color-hot: var(--pg-accent);
+  --color-hot-wash: var(--pg-accent-wash);
+  --color-paper: var(--pg-paper);
+}
+
+:root {
+  --pg-paper: #ffffff;
+  --pg-ink: #111111;
+  --pg-ink-2: #4a4a4a;
+  --pg-ink-3: #8a8a8a;
+  --pg-line: #e7e7e5;
+  --pg-wash: #f4f4f2;
+  --pg-accent: #ff3b00;
+  --pg-accent-wash: #ffe7de;
+
+  --radius: 0rem;
+  --background: var(--pg-paper);
+  --foreground: var(--pg-ink);
+  --card: var(--pg-paper);
+  --card-foreground: var(--pg-ink);
+  --popover: var(--pg-paper);
+  --popover-foreground: var(--pg-ink);
+  --primary: var(--pg-ink);
+  --primary-foreground: var(--pg-paper);
+  --secondary: var(--pg-wash);
+  --secondary-foreground: var(--pg-ink);
+  --muted: var(--pg-wash);
+  --muted-foreground: var(--pg-ink-2);
+  --accent: var(--pg-wash);
+  --accent-foreground: var(--pg-ink);
+  --destructive: var(--pg-accent);
+  --border: var(--pg-line);
+  --input: var(--pg-ink);
+  --ring: var(--pg-accent);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: var(--pg-accent);
+    color: white;
+  }
+}
+
+/* Type scale -------------------------------------------------------------- */
+.t-display { font-size: clamp(48px, 6.2vw, 92px); line-height: 0.9; letter-spacing: -0.04em; font-weight: 500; }
+.t-title   { font-size: clamp(34px, 3.4vw, 50px); line-height: 0.95; letter-spacing: -0.035em; font-weight: 500; }
+.t-lead    { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.3; letter-spacing: -0.02em; font-weight: 400; }
+.t-h3      { font-size: 20px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; }
+.t-h4      { font-size: 15px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700; }
+.t-small   { font-size: 13px; line-height: 1.35; letter-spacing: -0.005em; font-weight: 500; }
+.t-micro   { font-size: 11.5px; line-height: 1.3; letter-spacing: 0.01em; font-weight: 500; }
+.num       { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+.mono      { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0; }
+
+.gutter { padding-left: clamp(20px, 7.8vw, 112px); padding-right: clamp(20px, 7.8vw, 112px); }
+.rule-heavy { height: 3px; background: var(--pg-ink); }
+.rule { height: 1px; background: var(--pg-line); }
+
+/* Striped "fixture" swatch */
+.fixture-stripes {
+  background-image: repeating-linear-gradient(45deg, var(--pg-ink-3) 0 2px, transparent 2px 5px);
+}
+
+/* Scrollbars: quiet */
+.quiet-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+.quiet-scroll::-webkit-scrollbar-thumb { background: var(--pg-line); }
+
+/* Links */
+a.ink-link { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; color: var(--pg-ink-2); font-weight: 700; }
+a.ink-link:hover { color: var(--pg-ink); }
+
+/* Dots animate their fill when results arrive */
+.pg-dot { transition: background-color 180ms ease, border-color 180ms ease, opacity 180ms ease; }
+
+@keyframes pg-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.25 } }
+.pg-pulse { animation: pg-pulse 1.1s ease-in-out infinite; }
+
+/* Recharts: tabular, ink */
+.recharts-text { font-variant-numeric: tabular-nums; fill: var(--pg-ink-2); font-size: 11.5px; }
+.recharts-cartesian-axis-line, .recharts-cartesian-axis-tick-line { stroke: var(--pg-ink); }

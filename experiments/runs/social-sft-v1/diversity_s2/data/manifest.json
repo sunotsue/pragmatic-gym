@@ -1,0 +1,12 @@
+{
+  "selection_id": "d2ab852ead",
+  "strategy": "diversity",
+  "budget": 240000,
+  "tokens_used": 239925,
+  "n_items": 114,
+  "n_sft": 570,
+  "n_pref": 114,
+  "seed": 2,
+  "include_context": true,
+  "sha1": "037a634a47ce"
+}

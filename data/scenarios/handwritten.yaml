@@ -1,0 +1,690 @@
+# Pragmatic Gym — hand-written scenario corpus (v0.3)
+#
+# Every scenario is SYNTHETIC and authored by the researcher. `reference` is an
+# authored hypothesis about what a careful observer could reasonably infer from
+# the observable context — NOT a measured human consensus. Where readings are
+# genuinely ambiguous the reference distribution says so (no forced single
+# ground truth). `hidden` holds one concrete latent state for the researcher
+# view; it is never shown to models and is not the evaluation target.
+#
+# History rows are [sender, text, time]. "You" is the listener.
+# All scenarios are held out from training (split: eval_handwritten).
+
+- id: soft_no_birthday
+  domain: invitation
+  capability: indirect_speech
+  capabilities: [indirect_speech, history_dependent]
+  title: The Soft No
+  speaker: Jordan
+  relationship: Close friend
+  context:
+    - Jordan is one of your closest friends from university.
+    - Jordan didn't come to the last two things you invited them to — once they said they were tired, once they didn't reply until the day after.
+  history:
+    - [You, "Trivia night Thursday? 🧠", "5 weeks ago"]
+    - [Jordan, "Ahh maybe! I'll let you know", "5 weeks ago"]
+    - [You, "Picnic in the park Sunday if the weather holds?", "2 weeks ago"]
+    - [Jordan, "omg sorry just seeing this, how was it??", "2 weeks ago"]
+    - [You, "I'm doing a little dinner for my birthday Saturday at 7 — would love for you to be there 🎂", "Today"]
+    - [Jordan, "That sounds fun. I'll let you know!", "Today"]
+  reference: {follow_through: 0.12, undecided: 0.28, soft_decline: 0.45, keeping_options: 0.15}
+  rationale: >-
+    Two consecutive non-attendances after hedged replies make a polite decline the single most likely reading,
+    but nothing in the context rules out genuine uncertainty — the earlier misses had plausible innocent explanations.
+    A well-calibrated reader should lean towards 'polite no' without treating it as certain.
+  hidden: {true_intent: soft_decline, private_state: "Jordan is going through a breakup and doesn't feel social, but would be hurt to stop being invited."}
+  why_hidden_matters: The latent reason means pressure would be especially costly, while a warm release keeps the friendship open.
+  counterfactuals:
+    - id: explained_busy
+      change: Jordan had explained they were swamped and missed everyone.
+      context_add: ["Last week Jordan told you: 'work has been insane, but I really miss you all — keep inviting me!'"]
+      reference: {follow_through: 0.30, undecided: 0.45, soft_decline: 0.15, keeping_options: 0.10}
+      rationale: An explicit request to keep being invited makes the literal reading (genuinely undecided) the most plausible.
+    - id: reliable_history
+      change: Jordan has always followed through after saying "I'll let you know".
+      context_replace: ["Jordan is one of your closest friends from university.", "Whenever Jordan says 'I'll let you know', they always do — usually within a day."]
+      history_replace:
+        - [You, "I'm doing a little dinner for my birthday Saturday at 7 — would love for you to be there 🎂", "Today"]
+        - [Jordan, "That sounds fun. I'll let you know!", "Today"]
+      reference: {follow_through: 0.50, undecided: 0.38, soft_decline: 0.06, keeping_options: 0.06}
+      rationale: Same words, but a history of follow-through makes the phrase a reliable promise to answer, not a refusal.
+
+- id: ski_trip_cost
+  domain: invitation
+  capability: indirect_speech
+  capabilities: [indirect_speech, politeness_power]
+  title: The expensive yes
+  speaker: Priya
+  relationship: Close friend
+  context:
+    - You're organising a ski weekend with friends; the cabin and lift passes come to about $600 each.
+    - Priya mentioned last month that she's saving to move apartments.
+  history:
+    - [You, "Ski weekend in Feb!! ~$600 all in. You in? ⛷️", "Today"]
+    - [Priya, "Ooh that's a lot for me right now, but it sounds amazing", "Today"]
+  reference: {follow_through: 0.10, undecided: 0.30, soft_decline: 0.45, keeping_options: 0.15}
+  rationale: Naming the cost is a common face-saving way to decline; 'sounds amazing' preserves the relationship. It could also be a genuine request for a cheaper option.
+  hidden: {true_intent: undecided, private_state: "Priya would come if it cost under $300 but feels awkward saying so."}
+  why_hidden_matters: An alternative (cheaper option) is valuable here; assuming yes or pressuring are both costly.
+  counterfactuals:
+    - id: offered_cover
+      change: You already offered to cover the cabin share for anyone who needs it.
+      context_add: ["In your first message to the group, you said you'd happily cover the cabin share for anyone tight on money."]
+      reference: {follow_through: 0.20, undecided: 0.30, soft_decline: 0.40, keeping_options: 0.10}
+      rationale: The cost objection persisting despite an offer weakly increases the decline reading; still ambiguous.
+
+- id: mom_busy
+  domain: family
+  capability: indirect_speech
+  capabilities: [indirect_speech, politeness_power]
+  title: The Family Subtext
+  speaker: Mom
+  relationship: Parent
+  context:
+    - Your mom lives alone two hours away.
+    - You used to call every Sunday; it's been three weeks since your last call.
+  history:
+    - [You, "Hi Mom! Sorry, I missed your call earlier", "Today"]
+    - [Mom, "You must be very busy these days.", "Today"]
+  reference: {neutral_observation: 0.12, concern_wellbeing: 0.18, indirect_request: 0.50, mild_reproach: 0.20}
+  rationale: A broken routine plus a missed call makes an indirect request for contact the most likely reading; concern and mild reproach remain plausible and are not mutually exclusive with it.
+  hidden: {true_intent: indirect_request, private_state: "Mom has been feeling isolated since a friend moved away."}
+  why_hidden_matters: A concrete plan to talk meets the latent need; a literal 'yes, so busy' misses it.
+  counterfactuals:
+    - id: promotion_news
+      change: You just told her you started a demanding new role and she was thrilled.
+      context_replace: ["Your mom lives alone two hours away.", "Yesterday you told her about your big new role at work; she was thrilled and said she's proud of you."]
+      reference: {neutral_observation: 0.35, concern_wellbeing: 0.40, indirect_request: 0.20, mild_reproach: 0.05}
+      rationale: Fresh shared knowledge about a demanding job makes a sympathetic observation or concern more likely than a request.
+
+- id: toast_venue
+  domain: feedback
+  capability: implicature
+  capabilities: [implicature]
+  title: "“The venue was gorgeous”"
+  speaker: Leila
+  relationship: Close friend
+  context:
+    - You gave a toast at your sister's wedding last night. You were nervous and lost your place once.
+    - Leila was at your table.
+  history:
+    - [You, "Be honest — how was my toast? 😬", "Today"]
+    - [Leila, "The venue was absolutely gorgeous!! And the food 😍", "Today"]
+  reference: {sincere_positive: 0.08, tactful_negative: 0.50, mixed_ambivalent: 0.27, distracted: 0.15}
+  rationale: >-
+    The answer conspicuously addresses something other than the question (a relevance implicature). That most often
+    signals tactful avoidance, but it can also be enthusiasm spilling over or simply not having strong views.
+  hidden: {true_intent: mixed_ambivalent, private_state: "Leila thought the start was shaky but the ending was lovely."}
+  why_hidden_matters: Inviting honesty would surface useful, kind feedback; taking it as praise misreads the reply.
+  counterfactuals:
+    - id: away_during_toast
+      change: Leila was outside on a phone call during the toast.
+      context_add: ["You noticed Leila step outside to take a phone call just before your toast started."]
+      reference: {sincere_positive: 0.05, tactful_negative: 0.20, mixed_ambivalent: 0.10, distracted: 0.65}
+      rationale: If she likely missed it, deflection is better explained by not having seen it than by tact.
+    - id: cried_earlier
+      change: Leila told you last night the toast made her cry.
+      context_add: ["Right after the toast, Leila hugged you and said it made her cry."]
+      reference: {sincere_positive: 0.55, tactful_negative: 0.10, mixed_ambivalent: 0.20, distracted: 0.15}
+      rationale: Prior explicit praise makes the topic shift look like enthusiasm about the whole evening, not avoidance.
+
+- id: curry_interesting
+  domain: feedback
+  capability: implicature
+  capabilities: [implicature, emotional_repair]
+  title: "“It's… really interesting!”"
+  speaker: Riley
+  relationship: Partner
+  context:
+    - You cooked for Riley for the first time — a curry from your grandmother's recipe.
+  history:
+    - [You, "Ok so how is it?? Honest opinion", "Tonight"]
+    - [Riley, "It's… really interesting! I've never had anything like it.", "Tonight"]
+  reference: {sincere_positive: 0.20, tactful_negative: 0.45, mixed_ambivalent: 0.30, distracted: 0.05}
+  rationale: '"Interesting" plus a pause is a well-known hedge for dislike, but novelty can be sincerely interesting.'
+  hidden: {true_intent: tactful_negative, private_state: "Riley finds it too spicy but doesn't want to hurt you because it's a family recipe."}
+  why_hidden_matters: Inviting honesty gently (e.g. about spice) is better than either fishing for praise or self-deprecating.
+  counterfactuals:
+    - id: seconds
+      change: Riley is already on a second plate.
+      context_add: ["Riley has already gone back for a second plate."]
+      reference: {sincere_positive: 0.60, tactful_negative: 0.10, mixed_ambivalent: 0.25, distracted: 0.05}
+      rationale: Behaviour contradicts the hedge reading; 'interesting' is more likely literal curiosity.
+
+- id: some_photos
+  domain: feedback
+  capability: implicature
+  capabilities: [implicature]
+  title: "“Some of them came out really nice”"
+  speaker: Theo
+  relationship: Friend
+  context:
+    - You volunteered to take photos at Theo's engagement party and sent him 80 edited photos.
+  history:
+    - [You, "Did you like the photos?? 📸", "Today"]
+    - [Theo, "Some of them came out really nice!", "Today"]
+  reference: {sincere_positive: 0.20, tactful_negative: 0.15, mixed_ambivalent: 0.55, distracted: 0.10}
+  rationale: Scalar implicature — choosing 'some' over 'all/most' suggests not all of them worked for him, without implying he's displeased overall.
+  hidden: {true_intent: mixed_ambivalent, private_state: "Theo loved about a third and found many blurry."}
+  why_hidden_matters: Asking which ones he liked is useful; assuming he loved them all, or that he hated them, are both errors.
+  counterfactuals:
+    - id: all_of_them
+      change: Theo says "All of them came out really nice!"
+      history_replace:
+        - [You, "Did you like the photos?? 📸", "Today"]
+        - [Theo, "All of them came out really nice!", "Today"]
+      reference: {sincere_positive: 0.75, tactful_negative: 0.05, mixed_ambivalent: 0.10, distracted: 0.10}
+      rationale: Removing the scalar term removes the implicature; this is a manipulation check on the word 'some'.
+
+- id: brother_loan
+  domain: family
+  capability: politeness_power
+  capabilities: [politeness_power, indirect_speech]
+  title: "“No rush on the money”"
+  speaker: Marcus
+  relationship: Older brother
+  context:
+    - Your older brother Marcus lent you $800 four months ago; you said you'd pay it back 'in a few weeks'.
+    - Marcus doesn't usually talk about money.
+  history:
+    - [Marcus, "Btw, no rush on the money. Whenever.", "Today"]
+  reference: {neutral_observation: 0.30, concern_wellbeing: 0.10, indirect_request: 0.45, mild_reproach: 0.15}
+  rationale: Raising the topic unprompted after the promised window has passed is a common indirect reminder; the literal reassurance is still plausible.
+  hidden: {true_intent: indirect_request, private_state: "Marcus has a big bill due next month and is embarrassed to ask."}
+  why_hidden_matters: Proposing a concrete repayment plan meets the latent need while honouring the face-saving framing.
+  counterfactuals:
+    - id: car_broke
+      change: Marcus mentioned yesterday that his car broke down.
+      context_add: ["Yesterday Marcus mentioned his car broke down and the repair will be expensive."]
+      reference: {neutral_observation: 0.10, concern_wellbeing: 0.05, indirect_request: 0.70, mild_reproach: 0.15}
+      rationale: A new, shared fact about his finances makes the reminder reading much more likely.
+    - id: just_lent_again
+      change: Marcus brings it up while offering to lend more.
+      history_replace:
+        - [You, "Rent is brutal this month 😩", "Today"]
+        - [Marcus, "Need more help? Btw, no rush on the money. Whenever.", "Today"]
+      reference: {neutral_observation: 0.70, concern_wellbeing: 0.20, indirect_request: 0.07, mild_reproach: 0.03}
+      rationale: In the context of offering more help, the reassurance is very likely sincere.
+
+- id: inlaw_potatoes
+  domain: feedback
+  capability: politeness_power
+  capabilities: [politeness_power, implicature]
+  title: "“Oh, you made them this way”"
+  speaker: Diane
+  relationship: Partner's mother
+  context:
+    - You're hosting your partner's parents for the first time. You made the potatoes your own way rather than the family recipe.
+    - Diane is warm but traditional about family dishes.
+  history:
+    - [Diane, "Oh — you made the potatoes this way. Interesting.", "Tonight"]
+  reference: {sincere_positive: 0.15, tactful_negative: 0.45, mixed_ambivalent: 0.25, distracted: 0.15}
+  rationale: Marking the deviation from the family version with 'interesting' is a familiar soft criticism, but it might be neutral curiosity.
+  hidden: {true_intent: mixed_ambivalent, private_state: "Diane is surprised, a little attached to her version, but likes the taste."}
+  why_hidden_matters: An open, non-defensive reply works across readings; self-deprecation or fishing are costly with an in-law.
+  counterfactuals:
+    - id: asks_recipe
+      change: Diane asks for the recipe a minute later.
+      history_replace:
+        - [Diane, "Oh — you made the potatoes this way. Interesting.", "Tonight"]
+        - [Diane, "You'll have to write this down for me.", "Tonight"]
+      reference: {sincere_positive: 0.65, tactful_negative: 0.08, mixed_ambivalent: 0.22, distracted: 0.05}
+      rationale: Asking for the recipe is strong evidence the comment was positive.
+
+- id: grandma_forever
+  domain: family
+  capability: politeness_power
+  capabilities: [politeness_power, emotional_repair]
+  title: "“I won't be around forever”"
+  speaker: Grandma
+  relationship: Grandparent
+  context:
+    - Your grandmother is 84 and in good health. You last visited at New Year.
+  history:
+    - [You, "Sorry Grandma, I can't make it this weekend after all", "Today"]
+    - [Grandma, "That's alright. I won't be around forever, you know.", "Today"]
+  reference: {neutral_observation: 0.05, concern_wellbeing: 0.05, indirect_request: 0.55, mild_reproach: 0.35}
+  rationale: Following a cancellation, the line is most plausibly a request to visit with some reproach; it is rarely a neutral remark.
+  hidden: {true_intent: indirect_request, private_state: "She was planning to cook your favourite dish."}
+  why_hidden_matters: Reassurance with a concrete new date addresses the request; defending or changing the subject escalates.
+  counterfactuals:
+    - id: joking_tone
+      change: She says it laughing, as a running family joke, while asking about your trip.
+      history_replace:
+        - [You, "Sorry Grandma, I can't make it this weekend after all", "Today"]
+        - [Grandma, "Haha that's alright — I won't be around forever, you know 😜 Now tell me about your trip!", "Today"]
+      reference: {neutral_observation: 0.40, concern_wellbeing: 0.05, indirect_request: 0.40, mild_reproach: 0.15}
+      rationale: The joking frame and topic change weaken the reproach; a softer request remains plausible.
+
+- id: that_place
+  domain: reference
+  capability: common_ground
+  capabilities: [common_ground]
+  title: "“That place”"
+  speaker: Sam
+  relationship: Partner
+  options:
+    referent_a: "The ramen place from your first date"
+    referent_b: "The rooftop bar from last weekend"
+    referent_c: "The cabin from the summer trip"
+  context:
+    - Tomorrow is your one-year anniversary with Sam. Your first date was at a small ramen place downtown.
+    - Last weekend you both went to a rooftop bar and agreed it was too loud.
+    - Over the summer you stayed at a cabin with friends.
+  history:
+    - [Sam, "Want to go back to that place tomorrow? ❤️", "Today"]
+  reference: {referent_a: 0.65, referent_b: 0.05, referent_c: 0.10, unclear: 0.20}
+  rationale: The anniversary and the heart make the first-date place the most salient shared referent; the rooftop is dispreferred by shared opinion.
+  hidden: {true_intent: referent_a}
+  why_hidden_matters: Confirming the best guess is efficient and warm; asking 'which place?' signals the anniversary isn't salient to you.
+  counterfactuals:
+    - id: no_anniversary
+      change: There's no anniversary, and you both loved the rooftop.
+      context_replace:
+        - Your first date with Sam was at a small ramen place downtown, about a year ago.
+        - Last weekend you both went to a rooftop bar and said it was the best night you'd had in months.
+        - Over the summer you stayed at a cabin with friends.
+      reference: {referent_a: 0.15, referent_b: 0.60, referent_c: 0.05, unclear: 0.20}
+      rationale: Recency plus shared enthusiasm make the rooftop the most salient referent.
+
+- id: the_thing
+  domain: reference
+  capability: common_ground
+  capabilities: [common_ground, multiparty]
+  title: "“Did you tell them about the thing?”"
+  speaker: Nadia
+  relationship: Close friend
+  options:
+    referent_a: "Your new job"
+    referent_b: "Maya's surprise party"
+    referent_c: "Your breakup"
+  context:
+    - You and Nadia are secretly planning a surprise party for your friend Maya next week.
+    - You started a new job on Monday; most of your friends already know.
+    - You and your ex split up a month ago; you've told only a few people.
+  history:
+    - [Nadia, "Did you tell them about the thing?? 👀", "Today"]
+  reference: {referent_a: 0.10, referent_b: 0.55, referent_c: 0.15, unclear: 0.20}
+  rationale: The party is the active joint project and the eyes emoji suggests secrecy; the breakup remains possible if 'them' is your family.
+  hidden: {true_intent: referent_b}
+  why_hidden_matters: Under real referential uncertainty a confirming question is better than a confident assumption.
+  counterfactuals:
+    - id: parents_job
+      change: That morning you told Nadia you were nervous to tell your parents about the job.
+      context_add: ["This morning you told Nadia you were nervous to tell your parents that you'd changed jobs."]
+      reference: {referent_a: 0.60, referent_b: 0.20, referent_c: 0.05, unclear: 0.15}
+      rationale: The most recent shared topic involving an unknown 'them' becomes the default referent.
+
+- id: same_as_last_time
+  domain: reference
+  capability: common_ground
+  capabilities: [common_ground]
+  title: "“Same as last time?”"
+  speaker: Ines
+  relationship: Roommate
+  options:
+    referent_a: "Thai — what you two always order together"
+    referent_b: "Pizza — your most recent order, with other friends"
+    referent_c: "Sushi — from the night you moved in"
+  context:
+    - You and your roommate Ines usually order Thai on Friday nights.
+    - Last Friday Ines was away; you ordered pizza with other friends.
+  history:
+    - [Ines, "Ordering food — same as last time?", "Tonight"]
+  reference: {referent_a: 0.65, referent_b: 0.12, referent_c: 0.05, unclear: 0.18}
+  rationale: '"Last time" is anchored to the speaker''s experience: Ines wasn''t at pizza night, so the shared last time is Thai.'
+  hidden: {true_intent: referent_a}
+  why_hidden_matters: Tests perspective-taking — the most recent event in the listener's life is not in the speaker's common ground.
+  counterfactuals:
+    - id: ines_was_there
+      change: Ines was at pizza night.
+      context_replace:
+        - You and your roommate Ines usually order Thai on Friday nights.
+        - Last Friday you and Ines ordered pizza together with friends.
+      reference: {referent_a: 0.20, referent_b: 0.60, referent_c: 0.02, unclear: 0.18}
+      rationale: Once pizza is shared, recency makes it the default reading.
+
+- id: crush_late_reply
+  domain: invitation
+  capability: belief_revision
+  capabilities: [belief_revision, history_dependent]
+  title: The late yes
+  speaker: Kai
+  relationship: Romantic interest
+  context:
+    - You asked Kai out for a drink. Kai didn't reply for two days and you'd started to assume they weren't interested.
+  history:
+    - [You, "Would you want to grab a drink this week?", "2 days ago"]
+    - [Kai, "omg sorry just saw this!! yes I'd love to — Thursday?", "Today"]
+  reference: {follow_through: 0.75, undecided: 0.05, soft_decline: 0.03, keeping_options: 0.17}
+  rationale: An enthusiastic reply proposing a specific day should override the prior inferred from silence; some residual hedging is reasonable.
+  hidden: {true_intent: follow_through, private_state: "Kai was travelling with bad signal."}
+  why_hidden_matters: Tests updating — a model anchored on the earlier silence will under-update.
+  counterfactuals:
+    - id: vague_late
+      change: The late reply is vague.
+      history_replace:
+        - [You, "Would you want to grab a drink this week?", "2 days ago"]
+        - [Kai, "omg sorry just saw this!! maybe, let me see how the week goes", "Today"]
+      reference: {follow_through: 0.20, undecided: 0.30, soft_decline: 0.25, keeping_options: 0.25}
+      rationale: A vague reply after a long silence is genuinely ambiguous.
+
+- id: group_chaotic_week
+  domain: group
+  capability: belief_revision
+  capabilities: [belief_revision, multiparty]
+  title: Enthusiasm, then a crack
+  speaker: Theo
+  relationship: Friend group
+  channel: group_chat
+  participants: [Maya, Theo, Jules, Ben]
+  context:
+    - You suggested a group dinner in your friends' group chat.
+  history:
+    - [You, "Dinner soon?? It's been forever 🍝", "Mon"]
+    - [Maya, "YES pls", "Mon"]
+    - [Jules, "omg yes 😍", "Mon"]
+    - [Ben, "down!!", "Mon"]
+    - [Theo, "this week is kinda chaotic for me tbh", "Wed"]
+  reference: {real_commitment: 0.15, needs_organizer: 0.45, polite_enthusiasm: 0.25, hidden_obstacle: 0.15}
+  rationale: Three days of enthusiasm with no date, then a constraint, suggests willingness that needs someone to propose concrete options.
+  hidden: {true_intent: needs_organizer, private_state: "Maya and Ben are free next week; Theo is genuinely busy."}
+  why_hidden_matters: A low-stakes poll converts latent willingness into a plan; calling people out does not.
+  counterfactuals:
+    - id: cost_dm
+      change: Two people privately told you the place you suggested is too expensive.
+      context_add: ["Earlier, Jules and Ben each messaged you privately that the restaurant you mentioned is out of their budget."]
+      reference: {real_commitment: 0.05, needs_organizer: 0.25, polite_enthusiasm: 0.15, hidden_obstacle: 0.55}
+      rationale: Private information about cost makes a hidden obstacle the best explanation for non-commitment.
+
+- id: fine_then_followup
+  domain: emotional
+  capability: belief_revision
+  capabilities: [belief_revision, emotional_repair]
+  title: "“It's fine” — then a second message"
+  speaker: Ava
+  relationship: Close friend
+  context:
+    - You cancelled your Saturday hike with Ava the night before.
+  history:
+    - [You, "I'm so sorry, I have to cancel tomorrow 😞", "Fri 9:02pm"]
+    - [Ava, "It's fine.", "Fri 9:05pm"]
+    - [Ava, "seriously don't worry about it 😊 next weekend?", "Fri 9:16pm"]
+  reference: {genuinely_fine: 0.40, disappointed_understanding: 0.45, hurt_face_saving: 0.12, frustrated_pattern: 0.03}
+  rationale: The follow-up with an emoji and a counter-proposal should revise the curt first reply towards understanding.
+  hidden: {true_intent: disappointed_understanding}
+  why_hidden_matters: Tests whether a model updates on the second message rather than anchoring on 'It's fine.'
+  counterfactuals:
+    - id: public_post
+      change: No follow-up; Ava posts a pointed story instead.
+      history_replace:
+        - [You, "I'm so sorry, I have to cancel tomorrow 😞", "Fri 9:02pm"]
+        - [Ava, "It's fine.", "Fri 9:05pm"]
+      context_add: ["Half an hour later, Ava posted a story: 'love making plans with people 🙃'."]
+      reference: {genuinely_fine: 0.03, disappointed_understanding: 0.15, hurt_face_saving: 0.35, frustrated_pattern: 0.47}
+      rationale: A public sarcastic post is strong observable evidence against the literal reading.
+
+- id: its_fine_birthday
+  domain: emotional
+  capability: emotional_repair
+  capabilities: [emotional_repair]
+  title: It's Fine
+  speaker: Noor
+  relationship: Close friend
+  context:
+    - You cancelled on Noor's birthday dinner an hour before it started because a work deadline slipped.
+  history:
+    - [You, "Noor I'm so sorry, I can't make tonight — deadline disaster. Happy birthday 😭", "6:02pm"]
+    - [Noor, "It's fine.", "6:09pm"]
+  reference: {genuinely_fine: 0.10, disappointed_understanding: 0.38, hurt_face_saving: 0.37, frustrated_pattern: 0.15}
+  rationale: A birthday raises the stakes; a curt reply is consistent with disappointment or hurt, but nothing licenses assuming anger.
+  hidden: {true_intent: hurt_face_saving, private_state: "Noor had booked a table for six and told everyone you were coming."}
+  why_hidden_matters: Brief acknowledgement plus a concrete make-up plan works across the plausible readings; 'I can tell you're mad' does not.
+  counterfactuals:
+    - id: third_time
+      change: It's the third time this month you've cancelled on Noor.
+      context_add: ["This is the third time this month you've cancelled on Noor."]
+      reference: {genuinely_fine: 0.03, disappointed_understanding: 0.15, hurt_face_saving: 0.30, frustrated_pattern: 0.52}
+      rationale: A repeated pattern makes frustration the most plausible reading.
+    - id: relieved
+      change: Noor replies warmly and says she was tired anyway.
+      history_replace:
+        - [You, "Noor I'm so sorry, I can't make tonight — deadline disaster. Happy birthday 😭", "6:02pm"]
+        - [Noor, "It's fine! honestly I'm exhausted, I was half thinking of moving it anyway 😅", "6:09pm"]
+      reference: {genuinely_fine: 0.60, disappointed_understanding: 0.30, hurt_face_saving: 0.08, frustrated_pattern: 0.02}
+      rationale: Additional, specific content supports the literal reading.
+
+- id: haircut_joke
+  domain: emotional
+  capability: emotional_repair
+  capabilities: [emotional_repair, multiparty]
+  title: The joke that didn't land
+  speaker: Ben
+  relationship: Friend
+  channel: group_chat
+  participants: [Ben, Maya, Theo]
+  context:
+    - In the group chat, Ben posted a photo of his new haircut and you joked that he looks like a mushroom.
+  history:
+    - [Ben, "new cut 💇", "8:10pm"]
+    - [You, "lmaooo mushroom king 🍄", "8:11pm"]
+    - [Ben, "haha yeah.", "8:15pm"]
+  reference: {genuinely_fine: 0.25, disappointed_understanding: 0.10, hurt_face_saving: 0.50, frustrated_pattern: 0.15}
+  rationale: A flat 'haha yeah.' with a period after a public tease is a common face-saving response to being hurt, though it can also be low-effort texting.
+  hidden: {true_intent: hurt_face_saving, private_state: "Ben was self-conscious about the cut."}
+  why_hidden_matters: A light private check-in or a sincere compliment repairs; doubling down or a public grovel does not.
+  counterfactuals:
+    - id: plays_along
+      change: Ben plays along with the joke.
+      history_replace:
+        - [Ben, "new cut 💇", "8:10pm"]
+        - [You, "lmaooo mushroom king 🍄", "8:11pm"]
+        - [Ben, "haha yeah I look like a mushroom 🍄🍄 my barber hates me", "8:12pm"]
+      reference: {genuinely_fine: 0.75, disappointed_understanding: 0.05, hurt_face_saving: 0.15, frustrated_pattern: 0.05}
+      rationale: Elaborating the joke is evidence of genuine amusement.
+
+- id: forgot_anniversary
+  domain: emotional
+  capability: emotional_repair
+  capabilities: [emotional_repair, history_dependent]
+  title: "“It's just a date”"
+  speaker: Ari
+  relationship: Partner
+  context:
+    - You forgot your two-year anniversary with Ari until late in the evening.
+    - Ari had mentioned the date twice last week.
+  history:
+    - [You, "Oh no — it's our anniversary. I'm so sorry I forgot", "10:40pm"]
+    - [Ari, "Don't worry about it. It's just a date.", "10:44pm"]
+  reference: {genuinely_fine: 0.08, disappointed_understanding: 0.32, hurt_face_saving: 0.50, frustrated_pattern: 0.10}
+  rationale: Having mentioned the date twice makes the minimising reply more plausibly face-saving than sincere.
+  hidden: {true_intent: hurt_face_saving}
+  why_hidden_matters: Acknowledging impact and making a concrete gesture is better than taking the reassurance at face value.
+  counterfactuals:
+    - id: dont_celebrate
+      change: You both agreed long ago not to celebrate anniversaries.
+      context_replace: ["You and Ari agreed long ago that you don't really celebrate anniversaries.", "Ari brought it up today only as a fun fact."]
+      reference: {genuinely_fine: 0.70, disappointed_understanding: 0.20, hurt_face_saving: 0.08, frustrated_pattern: 0.02}
+      rationale: The shared agreement makes the literal reading the most likely.
+
+- id: same_page
+  domain: relationship
+  capability: history_dependent
+  capabilities: [history_dependent, belief_revision]
+  title: Are We on the Same Page?
+  speaker: Robin
+  relationship: Seeing each other
+  context:
+    - You and Robin have been seeing each other for four months. You've met each other's friends.
+    - A month ago you hinted at 'what we are' and Robin changed the subject to weekend plans.
+  history:
+    - [You, "Can I ask something kind of big? Where do you see this going?", "Tonight"]
+    - [Robin, "I really like what we have right now.", "Tonight"]
+  reference: {content_open: 0.25, prefers_status_quo: 0.30, hesitant_wants_more: 0.15, avoiding_talk: 0.30}
+  rationale: >-
+    The words are warm but answer a different question than the one asked; combined with one earlier deflection,
+    preference for the status quo and avoidance are as plausible as contentment. Genuinely ambiguous — no single reading should get high confidence.
+  hidden: {true_intent: hesitant_wants_more, private_state: "Robin is recently out of a long relationship and scared of moving fast, but wants this to work."}
+  why_hidden_matters: Sharing your own view without demanding a label can draw out hesitance; demanding a definition or assuming either extreme backfires.
+  counterfactuals:
+    - id: exclusive_said
+      change: Last month Robin said they aren't seeing anyone else and don't want to.
+      context_replace:
+        - You and Robin have been seeing each other for four months. You've met each other's friends.
+        - Last month Robin told you, unprompted, that they're not seeing anyone else and don't want to.
+      reference: {content_open: 0.50, prefers_status_quo: 0.08, hesitant_wants_more: 0.32, avoiding_talk: 0.10}
+      rationale: A prior explicit commitment shifts the same sentence towards contentment or cautious wanting more.
+    - id: ex_visit
+      change: Robin just got back from a weekend visiting an ex.
+      context_add: ["Robin just got back from a weekend visiting an ex 'as friends'."]
+      reference: {content_open: 0.12, prefers_status_quo: 0.45, hesitant_wants_more: 0.08, avoiding_talk: 0.35}
+      rationale: New information increases the status-quo and avoidance readings.
+
+- id: after_summer
+  domain: relationship
+  capability: history_dependent
+  capabilities: [history_dependent]
+  title: "“Let's see how things go after the summer”"
+  speaker: Mina
+  relationship: Long-distance
+  context:
+    - You and Mina met on a trip and have been doing long distance for three months.
+  history:
+    - [You, "Do you think we could make this a real thing?", "Tonight"]
+    - [Mina, "Let's just see how things go after the summer.", "Tonight"]
+  reference: {content_open: 0.15, prefers_status_quo: 0.35, hesitant_wants_more: 0.20, avoiding_talk: 0.30}
+  rationale: Deferral is consistent with hesitance, avoidance or wanting to keep it as it is; contentment is less consistent with postponing.
+  hidden: {true_intent: hesitant_wants_more}
+  why_hidden_matters: Sharing your own view gently is robust across readings.
+  counterfactuals:
+    - id: flights
+      change: Mina already sent you flights to visit in September.
+      context_add: ["Last week Mina sent you a screenshot of flights to visit you in September."]
+      reference: {content_open: 0.35, prefers_status_quo: 0.10, hesitant_wants_more: 0.45, avoiding_talk: 0.10}
+      rationale: Concrete future investment reframes the deferral as caution rather than avoidance.
+
+- id: catch_up_sometime
+  domain: invitation
+  capability: history_dependent
+  capabilities: [history_dependent, indirect_speech]
+  title: "“We should totally catch up sometime!”"
+  speaker: Zoe
+  relationship: Old friend
+  context:
+    - You and Zoe were close in high school and drifted apart after a falling-out three years ago.
+    - You ran into each other at a café today.
+  history:
+    - [You, "It was so nice running into you! Want to grab dinner sometime?", "Today"]
+    - [Zoe, "Yes!! We should totally catch up sometime!", "Today"]
+  reference: {follow_through: 0.20, undecided: 0.25, soft_decline: 0.35, keeping_options: 0.20}
+  rationale: '"Sometime" without a date is a conventional politeness formula; after a falling-out it more likely signals warmth without commitment.'
+  hidden: {true_intent: undecided, private_state: "Zoe would like to reconnect but is nervous about the old argument."}
+  why_hidden_matters: A concrete, low-pressure offer distinguishes politeness from real interest.
+  counterfactuals:
+    - id: proposes_date
+      change: Zoe immediately suggests a specific day.
+      history_replace:
+        - [You, "It was so nice running into you! Want to grab dinner sometime?", "Today"]
+        - [Zoe, "Yes!! We should totally catch up — are you free next Tuesday?", "Today"]
+      reference: {follow_through: 0.80, undecided: 0.10, soft_decline: 0.03, keeping_options: 0.07}
+      rationale: Proposing a concrete time is strong evidence of real intent.
+
+- id: group_dinner
+  domain: group
+  capability: multiparty
+  capabilities: [multiparty, common_ground]
+  title: The Group Chat
+  speaker: The group
+  relationship: Friend group
+  channel: group_chat
+  participants: [Maya, Theo, Jules, Ben, Sasha]
+  context:
+    - You suggested dinner in a group chat of six friends who haven't all met up since the summer.
+  history:
+    - [You, "We should do a group dinner soon!! 🍝", "Sun"]
+    - [Maya, "YES omg", "Sun"]
+    - [Theo, "so in", "Sun"]
+    - [Jules, "😍😍", "Sun"]
+    - [Ben, "100%", "Mon"]
+    - [Sasha, "yesss we need this", "Tue"]
+  reference: {real_commitment: 0.15, needs_organizer: 0.50, polite_enthusiasm: 0.25, hidden_obstacle: 0.10}
+  rationale: Universal enthusiasm with no date proposed after two days usually means people need a concrete option; it is not evidence of a plan.
+  hidden: {true_intent: needs_organizer, private_state: "Four of five are free on Friday the 12th; Sasha is away."}
+  why_hidden_matters: Assuming the plan is on, or giving up, both fail; a low-stakes concrete poll succeeds.
+  counterfactuals:
+    - id: dates_offered
+      change: Two people already offered specific availability.
+      history_replace:
+        - [You, "We should do a group dinner soon!! 🍝", "Sun"]
+        - [Maya, "YES omg — I'm free any Friday", "Sun"]
+        - [Theo, "same, Fridays work", "Sun"]
+        - [Jules, "😍😍 Fri 12th works for me", "Sun"]
+        - [Ben, "100%", "Mon"]
+        - [Sasha, "yesss we need this", "Tue"]
+      reference: {real_commitment: 0.55, needs_organizer: 0.35, polite_enthusiasm: 0.05, hidden_obstacle: 0.05}
+      rationale: Specific availability is evidence of genuine commitment.
+
+- id: trip_cost_silence
+  domain: group
+  capability: multiparty
+  capabilities: [multiparty, politeness_power]
+  title: "“How much are we thinking?”"
+  speaker: The group
+  relationship: Friend group
+  channel: group_chat
+  participants: [Lena, Omar, Hana, Cleo]
+  context:
+    - You're organising a weekend trip for a friend's 30th in a group chat.
+  history:
+    - [You, "Lisbon for Hana's 30th?? 🇵🇹 thinking late May", "Mon"]
+    - [Lena, "omg YES", "Mon"]
+    - [Omar, "so fun", "Mon"]
+    - [Cleo, "how much are we thinking?", "Tue"]
+    - [You, "Probably ~$900 each with flights + Airbnb", "Tue"]
+  reference: {real_commitment: 0.10, needs_organizer: 0.20, polite_enthusiasm: 0.20, hidden_obstacle: 0.50}
+  rationale: Enthusiasm stopped exactly when the price appeared; a cost obstacle is the most plausible explanation, though silence is noisy evidence.
+  hidden: {true_intent: hidden_obstacle, private_state: "Two people can't afford it but don't want to be the ones to say it."}
+  why_hidden_matters: A cheaper option or private opt-out helps; asking everyone to confirm publicly increases pressure.
+  counterfactuals:
+    - id: cheap_option
+      change: The price is low and people still go quiet.
+      history_replace:
+        - [You, "Lisbon for Hana's 30th?? 🇵🇹 thinking late May", "Mon"]
+        - [Lena, "omg YES", "Mon"]
+        - [Omar, "so fun", "Mon"]
+        - [Cleo, "how much are we thinking?", "Tue"]
+        - [You, "Found a cheap deal — ~$250 each all in!", "Tue"]
+      reference: {real_commitment: 0.15, needs_organizer: 0.30, polite_enthusiasm: 0.40, hidden_obstacle: 0.15}
+      rationale: If cost is removed and silence persists, polite enthusiasm or a need for organisation become more plausible.
+
+- id: ex_in_group
+  domain: group
+  capability: multiparty
+  capabilities: [multiparty, common_ground]
+  title: The ex in the chat
+  speaker: Jules
+  relationship: Friend group
+  channel: group_chat
+  participants: [Jules, Theo, Maya, Ben]
+  context:
+    - Jules and Theo broke up two weeks ago; everyone in the chat knows.
+    - You're organising a games night at your place.
+  history:
+    - [You, "Games night at mine Saturday! 🎲", "Wed"]
+    - [Theo, "I'm in!", "Wed"]
+    - [Maya, "yesss", "Wed"]
+    - [Jules, "I'll see if I can make it", "Thu"]
+  reference: {real_commitment: 0.10, needs_organizer: 0.10, polite_enthusiasm: 0.15, hidden_obstacle: 0.65}
+  rationale: Shared knowledge of the breakup plus Theo's confirmation makes an unspoken obstacle the most plausible reason for Jules' hedge.
+  hidden: {true_intent: hidden_obstacle}
+  why_hidden_matters: A private, low-pressure check-in with Jules respects the obstacle; public calls for confirmation don't.
+  counterfactuals:
+    - id: theo_out
+      change: Theo can't come.
+      history_replace:
+        - [You, "Games night at mine Saturday! 🎲", "Wed"]
+        - [Theo, "can't this week, have fun!", "Wed"]
+        - [Maya, "yesss", "Wed"]
+        - [Jules, "I'll see if I can make it", "Thu"]
+      reference: {real_commitment: 0.25, needs_organizer: 0.25, polite_enthusiasm: 0.30, hidden_obstacle: 0.20}
+      rationale: With the likely obstacle removed, the hedge is closer to an ordinary maybe.

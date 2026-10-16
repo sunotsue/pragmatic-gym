@@ -1,0 +1,107 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "seed": 1,
+  "n_examples": 590,
+  "train_tokens": 210431,
+  "epochs": 1,
+  "steps": 74,
+  "train_loss": 0.6135882590268109,
+  "loss_curve": [
+    {
+      "step": 5,
+      "loss": 0.5884000301361084
+    },
+    {
+      "step": 10,
+      "loss": 0.7043817520141602
+    },
+    {
+      "step": 15,
+      "loss": 0.5549030780792237
+    },
+    {
+      "step": 20,
+      "loss": 0.5452298641204834
+    },
+    {
+      "step": 25,
+      "loss": 0.46235017776489257
+    },
+    {
+      "step": 30,
+      "loss": 0.5629414081573486
+    },
+    {
+      "step": 35,
+      "loss": 1.6941953659057618
+    },
+    {
+      "step": 40,
+      "loss": 0.5273583412170411
+    },
+    {
+      "step": 45,
+      "loss": 0.5144919395446778
+    },
+    {
+      "step": 50,
+      "loss": 0.4922934055328369
+    },
+    {
+      "step": 55,
+      "loss": 0.4891940116882324
+    },
+    {
+      "step": 60,
+      "loss": 0.489101505279541
+    },
+    {
+      "step": 65,
+      "loss": 0.5214295387268066
+    },
+    {
+      "step": 70,
+      "loss": 0.525627613067627
+    }
+  ],
+  "runtime_s": 269.8,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "trl_torch_logprob_shim": false,
+  "train_config": {
+    "epochs": 1,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "per_device_batch_size": 8,
+    "grad_accum": 1,
+    "max_length": 1024,
+    "weight_decay": 0.0,
+    "completion_only_loss": true
+  },
+  "smoke": false,
+  "dataset_manifest": {
+    "selection_id": "ea6ed8a251",
+    "strategy": "random",
+    "budget": 240000,
+    "tokens_used": 239955,
+    "n_items": 118,
+    "n_sft": 590,
+    "n_pref": 118,
+    "seed": 1,
+    "include_context": true,
+    "sha1": "7c95134d86bc"
+  }
+}

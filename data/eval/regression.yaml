@@ -1,0 +1,43 @@
+# Unrelated-capability regression smoke test (40 items, authored).
+# Not a benchmark — a tripwire for catastrophic forgetting after LoRA SFT.
+# Scored by next-token letter probability with cyclic option orders.
+- {q: "What is 7 × 8?", options: ["56", "54", "64", "48"], answer: 0}
+- {q: "What is 15% of 200?", options: ["30", "15", "20", "35"], answer: 0}
+- {q: "What is 144 ÷ 12?", options: ["12", "14", "11", "10"], answer: 0}
+- {q: "Which is a prime number?", options: ["29", "21", "27", "33"], answer: 0}
+- {q: "What is 2 to the power of 5?", options: ["32", "25", "16", "64"], answer: 0}
+- {q: "If a train travels 60 km in 30 minutes, its speed is:", options: ["120 km/h", "60 km/h", "30 km/h", "90 km/h"], answer: 0}
+- {q: "What is the next number: 2, 4, 8, 16, …?", options: ["32", "24", "18", "20"], answer: 0}
+- {q: "What is 1000 − 357?", options: ["643", "653", "743", "657"], answer: 0}
+- {q: "What is the capital of France?", options: ["Paris", "Lyon", "Marseille", "Nice"], answer: 0}
+- {q: "What is the capital of Japan?", options: ["Tokyo", "Kyoto", "Osaka", "Sapporo"], answer: 0}
+- {q: "What is the capital of Canada?", options: ["Ottawa", "Toronto", "Vancouver", "Montreal"], answer: 0}
+- {q: "What is the capital of Australia?", options: ["Canberra", "Sydney", "Melbourne", "Perth"], answer: 0}
+- {q: "Which planet is closest to the Sun?", options: ["Mercury", "Venus", "Mars", "Earth"], answer: 0}
+- {q: "Water boils at sea level at:", options: ["100 °C", "90 °C", "80 °C", "120 °C"], answer: 0}
+- {q: "Which gas do plants absorb for photosynthesis?", options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Helium"], answer: 0}
+- {q: "How many continents are there?", options: ["7", "5", "6", "8"], answer: 0}
+- {q: "Which organ pumps blood through the body?", options: ["Heart", "Liver", "Lungs", "Kidney"], answer: 0}
+- {q: "What is H2O commonly called?", options: ["Water", "Hydrogen", "Salt", "Oxygen"], answer: 0}
+- {q: "Which is the largest ocean?", options: ["Pacific", "Atlantic", "Indian", "Arctic"], answer: 0}
+- {q: "Who wrote 'Romeo and Juliet'?", options: ["Shakespeare", "Dickens", "Austen", "Tolstoy"], answer: 0}
+- {q: "A synonym for 'happy' is:", options: ["joyful", "sad", "angry", "tired"], answer: 0}
+- {q: "An antonym for 'ancient' is:", options: ["modern", "old", "historic", "aged"], answer: 0}
+- {q: "Which word is a noun?", options: ["table", "quickly", "blue", "run"], answer: 0}
+- {q: "The plural of 'mouse' is:", options: ["mice", "mouses", "meese", "mouse"], answer: 0}
+- {q: "Which sentence is grammatical?", options: ["She has gone home.", "She have gone home.", "She gone has home.", "She going home has."], answer: 0}
+- {q: "'Benevolent' most nearly means:", options: ["kind", "angry", "lazy", "loud"], answer: 0}
+- {q: "Which word rhymes with 'cat'?", options: ["hat", "dog", "cut", "car"], answer: 0}
+- {q: "The past tense of 'run' is:", options: ["ran", "runned", "running", "runs"], answer: 0}
+- {q: "If all cats are animals and Tom is a cat, then Tom is:", options: ["an animal", "a dog", "not an animal", "unknown"], answer: 0}
+- {q: "You put ice cream in the sun. It will most likely:", options: ["melt", "freeze", "grow", "harden"], answer: 0}
+- {q: "Which item would you use to cut paper?", options: ["scissors", "spoon", "pillow", "cup"], answer: 0}
+- {q: "If today is Monday, the day after tomorrow is:", options: ["Wednesday", "Tuesday", "Thursday", "Sunday"], answer: 0}
+- {q: "Which is heavier?", options: ["a brick", "a feather", "a leaf", "a tissue"], answer: 0}
+- {q: "Where would you most likely find a penguin in the wild?", options: ["Antarctica", "the Sahara", "the Amazon", "Iceland's volcanoes"], answer: 0}
+- {q: "Which of these is a fruit?", options: ["apple", "carrot", "potato", "onion"], answer: 0}
+- {q: "What do bees make?", options: ["honey", "milk", "silk", "wax paper"], answer: 0}
+- {q: "How many minutes are in an hour?", options: ["60", "100", "30", "45"], answer: 0}
+- {q: "Which number is the largest?", options: ["0.9", "0.09", "0.19", "0.099"], answer: 0}
+- {q: "What color do you get by mixing blue and yellow?", options: ["green", "purple", "orange", "red"], answer: 0}
+- {q: "Which instrument has 88 keys?", options: ["piano", "violin", "flute", "drum"], answer: 0}

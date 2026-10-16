@@ -1,0 +1,12 @@
+{
+  "selection_id": "ea6ed8a251",
+  "strategy": "random",
+  "budget": 240000,
+  "tokens_used": 239955,
+  "n_items": 118,
+  "n_sft": 590,
+  "n_pref": 118,
+  "seed": 1,
+  "include_context": true,
+  "sha1": "7c95134d86bc"
+}
